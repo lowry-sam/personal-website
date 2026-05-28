@@ -18,25 +18,27 @@ const Sidebar = () => {
             <img src='https://as1.ftcdn.net/v2/jpg/05/16/70/86/1000_F_516708697_dSz9IOMSWq8p0Rtj8ra1UIudorn1y79e.jpg' alt='logo'/>
         </Link>
         <nav className={ showNav ? 'mobile-show': '' }>
-            <NavLink exact="true" activeclassname="active" to="/">
-                <FontAwesomeIcon icon={faHome} color="blue" onClick={()=>setShowNav(false)}/>
-            </NavLink>
-            <NavLink exact="true" activeclassname="active" className="about-link" to="/about" onClick={()=>setShowNav(false)}>
-                <FontAwesomeIcon icon={faUser} color="blue" />
-            </NavLink>
-            <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact" onClick={()=>setShowNav(false)}>
-                <FontAwesomeIcon icon={faEnvelope} color="blue" />
-            </NavLink>
-            <NavLink exact="true" activeclassname="active" className="portfolio-link" to="/portfolio" onClick={()=>setShowNav(false)}>
-                <FontAwesomeIcon icon={faSuitcase} color="blue" />
-            </NavLink>
-            <FontAwesomeIcon
-                onClick={()=>setShowNav(false)}
-                icon={faClose}
-                color='yellow'
-                size = "3x"
-                className="close-icon"
-            />
+            <div className='nav-items'>
+                <NavLink exact="true" activeclassname="active" to="/">
+                    <FontAwesomeIcon icon={faHome} color="blue" onClick={()=>setShowNav(false)}/>
+                </NavLink>
+                <NavLink exact="true" activeclassname="active" className="about-link" to="/about" onClick={()=>setShowNav(false)}>
+                    <FontAwesomeIcon icon={faUser} color="blue" />
+                </NavLink>
+                <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact" onClick={()=>setShowNav(false)}>
+                    <FontAwesomeIcon icon={faEnvelope} color="blue" />
+                </NavLink>
+                <NavLink exact="true" activeclassname="active" className="portfolio-link" to="/portfolio" onClick={()=>setShowNav(false)}>
+                    <FontAwesomeIcon icon={faSuitcase} color="blue" />
+                </NavLink>
+                <FontAwesomeIcon
+                    onClick={()=>setShowNav(false)}
+                    icon={faClose}
+                    color='yellow'
+                    size = "3x"
+                    className="close-icon"
+                />
+            </div>
         </nav>
         <ul>
             <li>

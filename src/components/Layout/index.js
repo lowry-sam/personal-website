@@ -4,19 +4,18 @@ import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
     return <>
-        <Sidebar/>
-
         <div className='App'>
-            <span className='tags top-tags'>&lt;body&gt;</span>
-
+            <Sidebar/>
+            <span className='tags top-tags'>
+                <span className='top-tag-html'>&lt;html&gt;</span>
+                <br/>
+                <span>&lt;body&gt;</span>
+            </span>
             <Outlet/>
-
             <span className='tags bottom-tags'>
                 &lt;/body&gt;
                 <br/>
-                <span className='bottom-tag-html'>&lt;/html&gt;
-                    
-                </span>
+                <span className='bottom-tag-html'>&lt;/html&gt;</span>
             </span>
         </div>
     </>

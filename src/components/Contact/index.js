@@ -12,7 +12,7 @@ const Contact = () => {
     const doSomething = async() =>{
         return setTimeout(() => {
             setLetterClass('text-animate-hover')
-        }, 4000)
+        }, 1000)
     }
         
     useEffect(() =>{
