@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser'
 import { MapContainer, TileLayer, Marker,Popup } from 'react-leaflet'
 
 const Contact = () => {
-    const [ letterClass, setLetterClass] = useState('text-animate')
+    const [ letterClass, setLetterClass ] = useState('text-animate')
     const form = useRef()
 
     const doSomething = async() =>{
