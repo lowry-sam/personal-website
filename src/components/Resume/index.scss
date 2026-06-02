@@ -1,6 +1,11 @@
 .resume {
     margin-top: 50px;
     overflow-y: scroll;
+    background-color: yellow;
+    height: 100%;
+    display: block;
+    min-height: 100%;
+    
 }
 
 h1 {
@@ -10,4 +15,10 @@ h1 {
 p {
     font-size: 200px;
     color: white;
+}
+
+ul {
+    li{
+        font-size: 24px;
+    }
 }
