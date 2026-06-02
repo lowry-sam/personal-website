@@ -51,6 +51,7 @@
         position: relative;
         margin-bottom: 40px;
         left: -10px;
+        width: auto;
   
         &:before {
           content: '<h1>';
@@ -130,7 +131,7 @@
         .text-zone {
           position: initial;
           transform: none;
-          width: 100%;
+          width: 90%;
           display: block;
           padding: 20px;
           box-sizing: border-box;

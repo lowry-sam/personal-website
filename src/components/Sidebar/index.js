@@ -7,62 +7,288 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+//import { AiOutlineClose, AiOutlineMenuUnfold } from 'reach-icons/ai'
+
+//const Sidebar = () => {
+    // const [burgerClass, setBurgerClass] = useState("burger-button unclicked");
+    // const [menuClass, setMenuClass] = useState("menu hidden");
+    // const [isMenuClicked, setMenuClicked] = useState("false");
+    
+    
+
+    // const navRef = useRef();
+    
+
+    // return(
+    //     <>
+    // <div className = 'nav-bar'>
+    //     {/* <Link className = 'logo' to = '/'>
+    //         <img src='https://as1.ftcdn.net/v2/jpg/05/16/70/86/1000_F_516708697_dSz9IOMSWq8p0Rtj8ra1UIudorn1y79e.jpg' alt='logo'/>
+    //     </Link> */}
+    //     {/* <nav className={ showNav ? 'mobile-show': 'non-mobile' }>
+    //         <ul>
+    //             <li><FontAwesomeIcon icon={faHome} color="blue" onClick={()=>setShowNav(false)}/></li>
+    //             <li>
+    //                 <NavLink exact="true" activeclassname="active" className="about-link" to="/about" onClick={()=>setShowNav(false)}>
+    //                     <FontAwesomeIcon icon={faUser} color="blue" />
+    //                 </NavLink></li>
+    //             <li>
+    //                 <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact" onClick={()=>setShowNav(false)}>
+    //                     <FontAwesomeIcon icon={faEnvelope} color="blue" />
+    //                 </NavLink>
+    //             </li>
+    //             <li>
+    //                 <NavLink exact="true" activeclassname="active" className="portfolio-link" to="/portfolio" onClick={()=>setShowNav(false)}>
+    //                     <FontAwesomeIcon icon={faSuitcase} color="blue" />
+    //                 </NavLink>
+    //             </li>
+    //         </ul>
+    //         <FontAwesomeIcon
+    //                 onClick={()=>setShowNav(false)}
+    //                 icon={faClose}
+    //                 color='yellow'
+    //                 size = "3x"
+    //                 className="close-icon"
+    //             />
+    //     </nav> */}
+        // <nav className={showNav ? 'mobile-show' : ''}>
+        //     <ul>
+        //         <li>
+        //             <Link className = 'nav-link' to = '/' onClick={toggleNav}>
+        //                 Home
+        //             </Link>
+        //         </li>
+        //         <li>
+        //             <Link className = 'nav-link' to = '/about' onClick={toggleNav}>
+        //                 About Me
+        //             </Link>
+        //         </li>
+
+        //         <li>
+        //             <Link className = 'nav-link' to = '/resume' onClick={toggleNav}>
+        //                 Resume
+        //             </Link>
+        //         </li>
+                
+        //         <li>
+        //             <Link className = 'nav-link' to = '/portfolio' onClick={toggleNav}>
+        //                 Portfolio
+        //             </Link>
+        //         </li>
+
+        //         <li>
+        //             <Link className = 'nav-link' to = '/contact' onClick={toggleNav}>
+        //                 Contact Me
+        //             </Link>
+        //         </li>
+        //     </ul>
+        //     <FontAwesomeIcon
+        //             onClick={toggleNav}
+        //             icon={faClose}
+        //             color='yellow'
+        //             size = "3x"
+        //             className="close-icon"
+        //         />
+
+                
+        // </nav>
+            
+            
+    //     {/* <nav className={ showNav ? 'mobile-show': '' }>
+    //         <div className='nav-items'>
+    //             <NavLink exact="true" activeclassname="active" to="/">
+    //                 <FontAwesomeIcon icon={faHome} color="blue" onClick={()=>setShowNav(false)}/>
+    //             </NavLink>
+    //             <NavLink exact="true" activeclassname="active" className="about-link" to="/about" onClick={()=>setShowNav(false)}>
+    //                 <FontAwesomeIcon icon={faUser} color="blue" />
+    //             </NavLink>
+    //             <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact" onClick={()=>setShowNav(false)}>
+    //                 <FontAwesomeIcon icon={faEnvelope} color="blue" />
+    //             </NavLink>
+    //             <NavLink exact="true" activeclassname="active" className="portfolio-link" to="/portfolio" onClick={()=>setShowNav(false)}>
+    //                 <FontAwesomeIcon icon={faSuitcase} color="blue" />
+    //             </NavLink>
+                
+    //         </div>
+    //     </nav> */}
+    //     {/* <ul>
+    //         <li>
+    //             <a target='_blank' rel='noreferrer' href="https://www.linkedin.com/in/sam-lowry/">
+    //                 <FontAwesomeIcon icon={faLinkedin} color='red'></FontAwesomeIcon>
+    //             </a>
+    //         </li>
+    //         <li>
+    //             <a target='_blank' rel='noreferrer' href="https://github.com/lowry-sam">
+    //                 <FontAwesomeIcon icon={faGithub} color='red'></FontAwesomeIcon>
+    //             </a>
+    //         </li>
+    //     </ul> */}
+
+    //     <FontAwesomeIcon
+    //         onClick={toggleNav}
+    //         icon={faBars}
+    //         color='white'
+    //         size = "3x"
+    //         //className='hamburger-icon'
+    //         className = 'hamburger-icon'
+    //     />
+        
+
+    // </div>
+
+   // }
+    //</>
 
 const Sidebar = () => {
-    const [showNav, setShowNav] = useState(false);
 
-    return(
-    <div className = 'nav-bar'>
-        <Link className = 'logo' to = '/'>
-            <img src='https://as1.ftcdn.net/v2/jpg/05/16/70/86/1000_F_516708697_dSz9IOMSWq8p0Rtj8ra1UIudorn1y79e.jpg' alt='logo'/>
-        </Link>
-        <nav className={ showNav ? 'mobile-show': '' }>
-            <div className='nav-items'>
-                <NavLink exact="true" activeclassname="active" to="/">
-                    <FontAwesomeIcon icon={faHome} color="blue" onClick={()=>setShowNav(false)}/>
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="about-link" to="/about" onClick={()=>setShowNav(false)}>
-                    <FontAwesomeIcon icon={faUser} color="blue" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact" onClick={()=>setShowNav(false)}>
-                    <FontAwesomeIcon icon={faEnvelope} color="blue" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="portfolio-link" to="/portfolio" onClick={()=>setShowNav(false)}>
-                    <FontAwesomeIcon icon={faSuitcase} color="blue" />
-                </NavLink>
-                <FontAwesomeIcon
-                    onClick={()=>setShowNav(false)}
+    // const [menu, setMenu] = useState(false)
+    // const handleChange = () => {
+    //     setMenu(!menu)
+    // }
+
+    // return (
+    //     <div className='nav-bar'>
+    //         <div>
+    //             <Link><span className='logo'>Sam Lowry</span></Link>
+    //         </div>
+    //         <div>
+    //             <nav>
+    //                 <a href="/" >Home</a>
+    //                 <a href="/about" >About Me</a>
+    //                 <a href="/resume" >Resume</a>
+    //                 <a href="/portfolio" >Portfolio</a>
+    //                 <a href="/contact" >Contact Me</a>
+    //             </nav>
+    //         </div>
+    //         {/* <div>
+    //             <button>Hey</button>
+    //         </div> */}
+    //         <div>
+    //             {/* {menu ? <AiOutlineClose /> : <AiOutlineMenuUnfold/>} */}
+    //         </div>
+    //     </div>
+    // )
+
+
+  const [showNav, setShowNav] = useState(false);
+  //const [showNav, setShowNav] = useState(false);
+    const [showBurger, setBurger] = useState(true);
+    const toggleNav = () => {
+        setShowNav(!showNav);
+        setBurger(!showBurger);
+    }
+
+  return (
+    <div className="nav-bar">
+      <Link 
+        className="logo"
+        to="/"
+        onClick={() => setShowNav(false)}>
+        <span><h1> Sam_ </h1><h1>Lowry</h1></span>
+      </Link>
+         <nav className={showNav ? 'mobile-show' : ''}>
+            <ul>
+                <li>
+                    <Link className = 'nav-link' to = '/' onClick={toggleNav}>
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link className = 'nav-link' to = '/about' onClick={toggleNav}>
+                        About Me
+                    </Link>
+                </li>
+
+                <li>
+                    <Link className = 'nav-link' to = '/resume' onClick={toggleNav}>
+                        Resume
+                    </Link>
+                </li>
+                
+                <li>
+                    <Link className = 'nav-link' to = '/portfolio' onClick={toggleNav}>
+                        Portfolio
+                    </Link>
+                </li>
+
+                <li>
+                    <Link className = 'nav-link' to = '/contact' onClick={toggleNav}>
+                        Contact Me
+                    </Link>
+                </li>
+            </ul>
+            <FontAwesomeIcon
+                    onClick={toggleNav}
                     icon={faClose}
                     color='yellow'
                     size = "3x"
                     className="close-icon"
                 />
-            </div>
+
+                
         </nav>
-        <ul>
-            <li>
-                <a target='_blank' rel='noreferrer' href="https://www.linkedin.com/in/sam-lowry/">
-                    <FontAwesomeIcon icon={faLinkedin} color='red'></FontAwesomeIcon>
-                </a>
-            </li>
-            <li>
-                <a target='_blank' rel='noreferrer' href="https://github.com/lowry-sam">
-                    <FontAwesomeIcon icon={faGithub} color='red'></FontAwesomeIcon>
-                </a>
-            </li>
-        </ul>
-
-        <FontAwesomeIcon
-            onClick={()=>setShowNav(true)}
-            icon={faBars}
-            color='yellow'
-            size = "3x"
-            className="hamburger-icon"
-        />
-
+//       {/* <ul>
+//         <li>
+//           <a
+//             href="https://www.linkedin.com/in/slobodan-gaji%C4%87-006bb8b8/"
+//             target="_blank"
+//             rel="noreferrer"
+//           >
+//             <FontAwesomeIcon
+//               icon={faLinkedin}
+//               color="#4d4d4e"
+//               className="anchor-icon"
+//             />
+//           </a>
+//         </li>
+//         <li>
+//           <a
+//             href="https://github.com/bobangajicsm"
+//             target="_blank"
+//             rel="noreferrer"
+//           >
+//             <FontAwesomeIcon
+//               icon={faGithub}
+//               color="#4d4d4e"
+//               className="anchor-icon"
+//             />
+//           </a>
+//         </li>
+//         <li>
+//           <a
+//             href="https://www.youtube.com/channel/UCBu5ulO4d-d47lAVybpRTkw"
+//             rel="noreferrer"
+//             target="_blank"
+//           >
+//             <FontAwesomeIcon
+//               icon={faYoutube}
+//               color="#4d4d4e"
+//               className="anchor-icon"
+//             />
+//           </a>
+//         </li>
+//         <li>
+//           <a href="skype:live:bobangajicsm" rel="noreferrer" target="_blank">
+//             <FontAwesomeIcon
+//               icon={faSkype}
+//               color="#4d4d4e"
+//               className="anchor-icon"
+//             />
+//           </a>
+//         </li>
+//       </ul> */}
+{/* //       <FontAwesomeIcon 
+//           onClick={() => setShowNav(true)}
+//           icon={faBars}
+//           color="#ffd700"
+//           size="3x"
+//           className='hamburger-icon' /> */}
     </div>
+  )
+}
+    
 
-)}
+
 
 export default Sidebar
