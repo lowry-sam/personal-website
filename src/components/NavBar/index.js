@@ -140,7 +140,7 @@ import { useState, useRef } from 'react'
    // }
     //</>
 
-const Sidebar = () => {
+const NavBar = () => {
 
     // const [menu, setMenu] = useState(false)
     // const handleChange = () => {
@@ -181,12 +181,27 @@ const Sidebar = () => {
 
   return (
     <div className="nav-bar">
-      <Link 
+         <Link 
         className="logo"
         to="/"
         onClick={() => setShowNav(false)}>
         <span><h1> Sam_ </h1><h1>Lowry</h1></span>
       </Link>
+
+      <Link 
+        className="mini-logo"
+        to="/"
+        onClick={() => setShowNav(false)}>
+        <span><h1> Sam_ Lowry</h1></span>
+      </Link>
+
+      <FontAwesomeIcon 
+           onClick={() => setShowNav(true)}
+           icon={faBars}
+           color="#ffd700"
+           size="3x"
+           className='hamburger-icon'/>
+
          <nav className={showNav ? 'mobile-show' : ''}>
             <ul>
                 <li>
@@ -218,6 +233,7 @@ const Sidebar = () => {
                     </Link>
                 </li>
             </ul>
+            
             <FontAwesomeIcon
                     onClick={toggleNav}
                     icon={faClose}
@@ -225,10 +241,96 @@ const Sidebar = () => {
                     size = "3x"
                     className="close-icon"
                 />
+                
 
                 
         </nav>
-//       {/* <ul>
+
+        {/* <ul className='socials'>
+            <li>
+                <FontAwesomeIcon
+                        icon={faLinkedin}
+                        color="white"
+                        className="anchor-icon"
+                    />
+                { <a href="https://www.linkedin.com/in/sam-lowry/">
+                    <FontAwesomeIcon
+                        //icon={}
+                        color="white"
+                        className="anchor-icon"
+                    />
+                </a> }
+                <a
+                    href="https://www.linkedin.com/in/sam-lowry/"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                   
+                    
+                </a>
+            </li>
+        </ul> */}
+        <ul className='socials'>
+        <li>
+           <a
+            href="https://www.linkedin.com/in/sam-lowry/"
+            
+          >
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              color="white"
+              className="anchor-icon"
+            />
+         </a> 
+        </li>
+        <li>
+           <a
+            href="https://github.com/lowry-sam"
+            
+          >
+            <FontAwesomeIcon
+              icon={faGithub}
+              color="white"
+              className="anchor-icon"
+            />
+         </a> 
+        </li>
+         
+{/* //             href="https://github.com/bobangajicsm"
+//             target="_blank"
+//             rel="noreferrer"
+//           >
+//             <FontAwesomeIcon
+//               icon={faGithub}
+//               color="#4d4d4e"
+//               className="anchor-icon"
+//             />
+//           </a>
+//         </li>
+//         <li>
+//           <a
+//             href="https://www.youtube.com/channel/UCBu5ulO4d-d47lAVybpRTkw"
+//             rel="noreferrer"
+//             target="_blank"
+//           >
+//             <FontAwesomeIcon
+//               icon={faYoutube}
+//               color="#4d4d4e"
+//               className="anchor-icon"
+//             />
+//           </a>
+//         </li>
+//         <li>
+//           <a href="skype:live:bobangajicsm" rel="noreferrer" target="_blank">
+//             <FontAwesomeIcon
+//               icon={faSkype}
+//               color="#4d4d4e"
+//               className="anchor-icon"
+//             />
+//           </a>
+//         </li>
+//       </ul> */}
+       {/* <ul>
 //         <li>
 //           <a
 //             href="https://www.linkedin.com/in/slobodan-gaji%C4%87-006bb8b8/"
@@ -275,15 +377,10 @@ const Sidebar = () => {
 //               color="#4d4d4e"
 //               className="anchor-icon"
 //             />
-//           </a>
-//         </li>
-//       </ul> */}
-{/* //       <FontAwesomeIcon 
-//           onClick={() => setShowNav(true)}
-//           icon={faBars}
-//           color="#ffd700"
-//           size="3x"
-//           className='hamburger-icon' /> */}
+//           </a> */}
+         
+       </ul> 
+       
     </div>
   )
 }
@@ -291,4 +388,4 @@ const Sidebar = () => {
 
 
 
-export default Sidebar
+export default NavBar

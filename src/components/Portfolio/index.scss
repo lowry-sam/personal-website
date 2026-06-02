@@ -4,13 +4,17 @@
     width: calc(100% - 150px);
     position: initial;
     height: 100%;
-    overflow: auto;
+    overflow-y: scroll;
     scroll-behavior: smooth;
     display: inline-block;
 
     h1.page-title {
         margin-left: 100px;
         margin-top: 100px;
+    }
+
+    .render-portfolio {
+        overflow-y: scroll;
     }
 
     .images-container {

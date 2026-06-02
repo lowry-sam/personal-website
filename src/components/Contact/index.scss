@@ -1,6 +1,7 @@
 .contact-form {
     width: 100%;
     margin-top: 20px;
+    overflow: scroll;
   
     ul {
       padding: 0;
@@ -12,7 +13,7 @@
         list-style: none;
         margin-bottom: 10px;
         opacity: 0;
-        overflow: hidden;
+        //overflow: hidden;
         display: block;
         clear: both;
         position: relative;

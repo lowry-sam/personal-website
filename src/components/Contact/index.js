@@ -4,6 +4,7 @@ import Loader from 'react-loaders'
 import { useEffect, useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import { MapContainer, TileLayer, Marker,Popup } from 'react-leaflet'
+import Footer from '../Footer'
 
 const Contact = () => {
     const [ letterClass, setLetterClass ] = useState('text-animate')
@@ -115,7 +116,9 @@ return (
             </Marker>
           </MapContainer>
         </div>
+       
       </div>
+      <Footer/>
       <Loader type="pacman" />
     </>
   )
