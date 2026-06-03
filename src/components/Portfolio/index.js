@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.scss'
 import Loader from 'react-loaders';
+import { MoonLoader } from 'react-spinners';
 import AnimatedLetters from '../AnimatedLetters';
 import { useState, useEffect, useRef } from 'react'
 import portfolioData from '../../data/portfolio.json'
@@ -44,6 +45,7 @@ const Portfolio = () => {
 
     return (
         <>
+        
             <div className='container portfolio-page'>
                 <h1 className='page-title'>
                     <AnimatedLetters 
@@ -56,7 +58,8 @@ const Portfolio = () => {
                     {renderPortfolio(portfolioData.portfolio)}
                 </div>
             </div>
-            <Loader type="pacman"/>
+            {/* <CircleLoader color="blue" /> */}
+            <Loader type="ball-scale-ripple-multiple"/>
         </>
     );
 }

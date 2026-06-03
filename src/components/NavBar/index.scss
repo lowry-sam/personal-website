@@ -262,14 +262,14 @@
       display: flex;
       top: 0;
       z-index: 3;
-      min-height: 100px;
+      min-height: 80px;
       margin: auto;
       justify-content: center;
        align-items: center;
        
     .socials{
       display: flex;
-      right: 15px;
+      right: 25px;
       transform: translateX(100px);
       //background-color: red;
       padding: 0rem;
@@ -277,7 +277,7 @@
       list-style-type: none;
       right: 0;
       .anchor-icon {
-        font-size: 20px;
+        font-size: 15px;
         &:hover {
            color: yellow;
                 
@@ -291,12 +291,12 @@
 
     .logo {
       display: block;
-      position: fixed;
-      left: 15px;
-      padding: 8px 20px;
+      position: absolute;
+      left: 60px;
+      //padding: 8px 20px;
       text-decoration: none;
       color: white;
-      font-size: 30px;
+      font-size: 15px;
       font-family:Georgia, 'Times New Roman', Times, serif;
       justify-content: right;
       //flex-direction: row;
@@ -314,12 +314,24 @@
         padding: 20 20;
         //background-color: red;
         justify-content: right;
+        flex-direction: column;
+        
         //flex-direction: row;
+        ul {
+          list-style-type: none;
+          
+          li {
+            font-size: 15px;
+          }
+        }
 
         h1 {
-          font-size: 25px;
+          font-size:10px;
           justify-content: right;
-
+          color: white;
+          &:hover {
+            color: yellow;
+          }
           
           
         }
@@ -340,7 +352,7 @@
       }
 
     nav {
-      transform: translateX(30px);
+      transform: translateX(20px);
       transition: 0.5s;
       ul {
         //background-color: red;
@@ -368,9 +380,9 @@
               color: white;
               //top: 15px;
               position: relative;
-              font-size: 30px;
+              font-size: 20px;
               text-decoration: none;
-              padding: 0.5rem 3rem;
+              padding: 0.5rem 5rem;
               display: block;
               justify-content: center;
               align-items: center;
@@ -381,13 +393,13 @@
               @media screen and (max-width: 1500px) and (min-width: 1300px) {
                 //font-size: 35px;
                 transition: 0.05s;
-                padding: 0.5rem 1rem;
+                padding: 0.5rem 3rem;
               }
 
               @media screen and (max-width: 1300px) and (min-width: 1199px) {
                 //font-size: 30px;
                 transition: 0.05s;
-                padding: 0.5rem 0.5rem;
+                padding: 0.5rem 3rem;
               }
 
               &:hover {
@@ -809,26 +821,35 @@
     //  }
 
      .logo {
-      display: none
+      display: none;
+      
+      
      }
 
     .mini-logo {
       display: flex;
-      top: 10px;
-      color: white;
+      top: 5px;
+      
       font-size: 200;
-      position: fixed;
-        color: white;
+      position: absolute;
+       
         //top: 0px;
         left: 0px;
       padding: 8px 20px;
       text-decoration: none;
-      color: white;
+      color: rgb(227, 75, 75);
       font-size: 30px;
 
        font-family:Georgia, 'Times New Roman', Times, serif;
        justify-content: center;
        align-items: center;
+
+       h1 {
+        color: white;
+        &:hover {
+            color: yellow;
+        }
+       }
       // //flex-direction: row;
       // padding: 20 20;
       //flex-direction: column;

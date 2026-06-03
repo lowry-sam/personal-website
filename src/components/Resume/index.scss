@@ -1,24 +1,57 @@
 .resume {
     margin-top: 50px;
     overflow-y: scroll;
-    background-color: yellow;
-    height: 100%;
+    //background-color: green;
+    height: 90vh;
     display: block;
-    min-height: 100%;
-    
-}
+    //min-height: 90vh;
 
-h1 {
-    font-size: 200px;
-    color: white;
-}
-p {
-    font-size: 200px;
-    color: white;
-}
-
-ul {
-    li{
-        font-size: 24px;
+    h1 {
+        font-size: 20px;
+        color: white;
     }
+
+    .box {
+            display: flex;
+            background-color: red;
+            width: auto;
+            height: auto;
+            min-height: 64vh;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            padding: 20px 20px;
+            margin: 20px 20px;
+        }
+
+    .render-resume {
+        background-color: orange;
+        width: 80%;
+        display: block;
+        overflow-y: scroll;
+        margin-top: 30px;
+        position: inherit;
+        margin-left: -50px;
+        flex-direction: row;
+
+        .resume-box {
+            color: white;
+            padding: 10px 20px;
+            flex-direction: row;
+        }
+
+        
+    }
+
 }
+
+ @media screen and (max-width: 1200px) {
+    .resume {
+        height: auto;
+
+        .box {
+            min-height: 70vh;
+        }
+    }
+ }
+
+

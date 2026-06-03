@@ -30,6 +30,7 @@
 
     ul {
         margin: 5px 0;
+        margin-bottom: 20px;
         list-style-type: none;
         display: flex;
         text-decoration: none;
@@ -78,7 +79,11 @@
 
 @media screen and (max-width: 1200px) {
     .footer{
-        
+        margin-bottom: 0px;
+       
+        h3 {
+             margin-top: 1px;
+        }
             .contacts-list {
                 display: none
              }

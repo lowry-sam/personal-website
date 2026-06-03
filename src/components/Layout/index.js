@@ -2,27 +2,43 @@ import './index.scss';
 import NavBar from '../NavBar/index'
 import { Outlet } from 'react-router-dom';
 import Footer from '../Footer';
+import Spinner from '../Spinner';
+import { useEffect, useState } from 'react';
+import {AnimatePresence} from "framer-motion";
+
+
 
 const Layout = () => {
-    return <>
+    const [showSpinner, setShowSpinner] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setShowSpinner(false)
+        }, 2000)
+    }, []);
+
+    return (
+        <>
+        <AnimatePresence type="wait">
         <div className='App'>
-           
-            <NavBar/>
-            {/* <span className='tags top-tags'>
-                <span className='top-tag-html'>&lt;html&gt;</span>
-                <br/>
-                <span>&lt;body&gt;</span>
-            </span> */}
-            <div className="main-content"> <Outlet/></div>
-           
-            {/* <span className='tags bottom-tags'>
-                &lt;/body&gt;
-                <br/>
-                <span className='bottom-tag-html'>&lt;/html&gt;</span>
-            </span> */}
-            <Footer/>
+            {/* {
+                    showSpinner ? (<Spinner/> ):( */}
+                        <div>
+                    
+                            <NavBar/>
+                            
+                            <div className="main-content"> <Outlet/></div>
+                        
+                            
+                            {/* <Footer/> */}
+                        </div>
+                    
+            
         </div>
-    </>
+        </AnimatePresence>
+        </>
+    
+    )
 }
 
-export default Layout
+export default Layout;

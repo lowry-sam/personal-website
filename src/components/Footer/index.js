@@ -26,7 +26,7 @@ const Footer = () => {
                         <a
                             href="/contact"
                             className='email'
-                        > Email 
+                        > slowry44@me.com
                             <FontAwesomeIcon
                             icon={faEnvelope}
                             color="red"
@@ -36,7 +36,7 @@ const Footer = () => {
                         <a
                             href="/contact"
                             
-                        > | Phone
+                        > | 843-801-5911
                             <FontAwesomeIcon
                             icon={faPhone}
                             color="red"

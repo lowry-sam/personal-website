@@ -185,7 +185,7 @@ const NavBar = () => {
         className="logo"
         to="/"
         onClick={() => setShowNav(false)}>
-        <span><h1> Sam_ </h1><h1>Lowry</h1></span>
+        <span><h1><ul><li> Sam_ </li><li>Lowry</li></ul></h1></span>
       </Link>
 
       <Link 

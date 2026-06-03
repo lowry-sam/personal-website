@@ -1,7 +1,8 @@
-$primary-color: #ffd700;
+$primary-color: white;
 
 @import 'animate.css';
 @import '~loaders.css/src/animations/pacman.scss';
+@import '~loaders.css/src/animations/ball-scale-ripple-multiple.scss';
 
 // @font-face {
 //   font-family: 'Helvetica Neue';
@@ -38,11 +39,13 @@ textarea {
 .loader-active {
   display: block;
   position: absolute;
+  color: white;
   left: 0;
   right: 0;
   margin: auto;
   top: 0;
   bottom: 0;
+  transform: translateY(20px) translateX(20px);
   width: 50px;
   height: 50px;
   animation: fadeOut 1s 1s;
