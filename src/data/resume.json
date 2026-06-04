@@ -1,45 +1,145 @@
 {
-    "resume": [
+    "resumeTech": [
         {
-            "title": "test",
-            "description": ["testing!", "testing2"],
-            "company": "company",
-            "start-date": "date1",
-            "end-date": "enddate",
-            "tags": ["tag1", "tag2"]
+            "title": "Application Software Development Intern",
+            "company": "Centene Corporation",
+            "location": "Ponte Vedra, FL",
+            "description": ["Developed and deployed code in an Angular and Golang environment while utilizing Docker to build internal tools utilized by over 150 team members.", 
+                        "Worked in an agile development framework and participated in daily SCRUM meetings with a team of 13 people to demonstrate progress and ask team members questions for guidance.",
+                        "Communicated with other team members, dozens of interns, and upper management to accomplish goals and solve problems."],
+            "startDate": "May 2022",
+            "endDate": "August 2022",
+            "tags": ["Angular", "JavaScript", "HTML", "CSS", "Docker", "SCRUM", "Communication", "Microsoft Teams", "Slack"]
         },
         {
-            "title": "test",
-            "description": ["testing!", "testing2"],
-            "company": "company",
-            "startDate": "date1",
-            "endDate": "enddate",
-            "tags": ["tag1", "tag2"]
-        },
-        {
-            "title": "test",
-            "description": ["testing!", "testing2"],
-            "company": "company",
-            "startDate": "date1",
-            "endDate": "enddate",
-            "tags": ["tag1", "tag2"]
-        },
-        {
-            "title": "test",
-            "description": ["testing!", "testing2"],
-            "company": "company",
-            "startDate": "date1",
-            "endDate": "enddate",
-            "tags": ["tag1", "tag2"]
-        },
-        {
-            "title": "test",
-            "description": ["testing!", "testing2"],
-            "company": "company",
-            "startDate": "date1",
-            "endDate": "enddate",
-            "tags": ["tag1", "tag2"]
+            "title": "Vice President of Internal Affairs",
+            "company": "Carolina Productions",
+            "location": "Columbia, SC",
+            "description": ["Lead the general body of the organization with over 20 members, organizing and leading weekly meetings and events.", 
+                        "Created and managed the budget for the 2022-2023 Fiscal Year using Microsoft Excel and presented it before an approval Advisory Board.",
+                        "Increased general body membership by 15% and intra-organizational communication by creating a weekly newsletter and running weekly body meetings."],
+            "startDate": "January 2022",
+            "endDate": "December 2022",
+            "tags": ["Leader", "Microsoft Excel", "Google Workspace", "Event Planning", "Team Building"]
         }
+    ],
+     "resumeTraining": [
+        {
+            "title": "High School Math and Computer Science Teacher",
+            "company": "CCSMS",
+            "location": "Charleston, SC",
+            "description": 
+            ["Taught 5 unique classes in high school mathematics such as Pre-Calculus and Probability and Statistics, and 2 classes in IT and Computing centered around the CompTIA+ certification.", 
+            "Developed relationships with over 100 students and ensured all scholars felt welcomed and attended to with personalized feedback and direct encouragement.",
+            "Designed and implemented long-range curriculums, invigorating lesson plans, and personal improvement plans for a diverse body of students, ensuring that each learner was addressed, using tools for curriculum building and hands-on labs such as CodeHS and the Google Suite to maintain a pass rate of 95%.",
+            "Communicated and coordinated with dozens of faculty members, administration, and hundreds of parents to ensure student success in and out of the classroom. "],
+            "startDate": "August 2024",
+            "endDate": "June 2026",
+            "tags": ["Teaching", "Tech Training", "Microsoft Office", "Zoom", "Google Workspace", "SLO", "Differentiation", "Coaching", "Instructing", "Professional Development", "Canvas", "Curriculum Development"]
+        },
+        {
+            "title": "Student Teacher",
+            "company": "Dreher High School",
+            "location": "Columbia, SC",
+            "description": 
+            ["Taught two sections of Mathematics and AP Computer Science under the advisement of a coaching teacher to develop my teaching abilities.", 
+            "Built and implemented a detailed and equitable Student Learning Objective plan that addressed the specific needs for 42 students with a variety of learning styles in my classes over the course of 1 semester.",
+            "Developed relationships with dozens of students and coordinated with their families to create specialized education plans that worked with their unique learning needs."],
+            "startDate": "January 2024",
+            "endDate": "May 2024",
+            "tags": ["AP", "Coaching", "Google Workspace", "Development", "Curriculum Development", "SLO"]
+        }, 
+        {
+            "title": "Computer Science Teaching Assistant",
+            "company": "University of South Carolina",
+            "location": "Columbia, SC",
+            "description": ["Helped over 100 Computer Science students with a variety of problems in a Java Environment through mediating in-person and virtual meetings through Microsoft Teams.", 
+                    "Communicated with students, their instructor, and other graduate and undergrad TAs to facilitate a course pass rate of over 80%.",
+                "Created and mediated dozens of meetings to help students and answer questions."],
+            "startDate": "January 2021",
+            "endDate": "May 2021",
+            "tags": ["Microsoft Teams", "Java", "Zoom", "Feedback", "Instructional Meetings"]
+        },
+        {
+            "title": "Climbing Wall Instructor",
+            "company": "Strom Thurmond Wellness and Fitness Center",
+            "location": "Columbia, SC",
+            "description": ["Worked and communicated with 5 other instructors and management to regulate shifts at the climbing wall.", 
+                        "Instructed and oversaw safety precautions and proper climbing techniques for dozens of gym members daily, developing instructional methodologies.",
+                        "Managed upkeep of existing climbing routes and creating new routes on the wall through customer feedback and creative thinking."],
+            "startDate": "June 2023",
+            "endDate": "August 2023",
+            "tags": ["Instructing", "Creative Thinking", "Communication", "Safety"]
+        }
+    ],
+     "resumeService": [
+        {
+            "title": "Wait Staff",
+            "company": "Vicar's Landing Assisted Living Facility",
+            "location": "Ponte Vedra, FL",
+            "description": ["Prepped, cooked, and served the 50 residents of the home while also washing and preparing dishes for the chefs.", 
+                        "Created personal bonds with all 50 residents making them feel more comfortable and at home.",
+                        "Communicated and built bonds with my coworkers, utilizing teamwork to solve tough problems."],
+            "startDate": "July 2018",
+            "endDate": "July 2024",
+            "tags": ["Teamwork", "Food Service", "Customer Service", "Preparation", "Cooking", "Communication", "Cleaning", "Relationship-Building", "Food Safety"]
+        }, 
+        {
+            "title": "Front Service Clerk",
+            "company": "Publix Super Markets",
+            "location": "Columbia, SC",
+            "description": ["Bagged and delivered groceries to hundreds of customers every day.", 
+                        "Communicated with cashiers, other departments, and upper management to solve problems with customers and in the workplace.",
+                        "Conversed with hundreds of customers a day creating a personal bond to enhance shopping experiences and allowing provided feedback with our service."],
+            "startDate": "June 2021",
+            "endDate": "August 2022",
+            "tags": ["Teamwork", "Money Handling", "Communication", "Cashiering", "Bagging", "Cleaning", "Relationship-Building"]
+        },
+        {
+            "title": "Expo & Pantry Chef",
+            "company": "Opal Restaurant and Bar",
+            "location": "Charleston, SC",
+            "description": ["Cooked food for dozens of customers a night through communication with the chef staff, wait staff, and costumers.", 
+                            "Prepared food for service by ensuring that each order is perfected through an ability to work in a fast-paced environment and a strong attention-to-detail.",
+                            "Heavily cleaned workstations, organized shelves and cabinets, and readied materials for subsequent shifts."],
+            "startDate": "June 2025",
+            "endDate": "August 2025",
+            "tags": ["Teamwork", "Cooking", "Cleaning", "Attention-to-Detail", "Communication", "Food Safety"]
+        },
         
+        {
+            "title": "Usher & Stagehand",
+            "company": "Koger Center for the Arts",
+            "location": "Columbia, SC",
+            "description": ["Conversed with hundreds of patrons daily to ensure safety and enhance their experiences with dozens of shows year-round.", 
+                        "Worked with 10 other ushers, over 20 other stagehands, and upper management to properly set-up and run various types of performances, as well as coordinating and solving difficult problems."],
+            "startDate": "February 2023",
+            "endDate": "June 2024",
+            "tags": ["Ushering", "Stagehand", "Communication", "Relationship-Building", "Customer Service"]
+        },
+        {
+            "title": "Team Member",
+            "company": "Pet Supplies Plus",
+            "location": "Columbia, SC",
+            "description": ["Handled money as a cashier and worked with dozens of customers daily at the register and on the floor to ensure a meaningful shopping experience.", 
+                        "Communicated with 15 other team members and upper management to solve problems and manage daily tasks, including feeding and caring for multiple species of animals.",
+                        "Arranged and sorted hundreds of products utilizing UPC codes on shelves, and fulfilled customer requests in-store and online."],
+            "startDate": "February 2023",
+            "endDate": "August 2023",
+            "tags": ["Money Handling", "Cashiering", "Stocking", "UPC", "Attention-to-Detail", "Communication", "Animals", "Safety"]
+        },
+        {
+            "title": "General Staff",
+            "company": "Beezer's Gourmet Sandwich Shop",
+            "location": "Columbia, SC",
+            "description": ["Prepared and served hundreds of sandwiches per day, ensuring customer satisfaction through attention-to-detail, timeliness, and feedback. ", 
+                            "Communicated and used teamwork with coworkers and managers to maintain productivity and properly serve customers.",
+                            "Cleaned and readied workstations between shifts to maintain proper food safety and workflow."],
+            "startDate": "October 2022",
+            "endDate": "June 2023",
+            "tags": ["Cleaning", "Cooking", "Communication", "Money Handling"]
+        }
     ]
 }
+
+   
