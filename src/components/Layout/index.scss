@@ -4,7 +4,7 @@
   display: block;
   min-height: 100vh;
   //background-color: green;
-  background: linear-gradient(to bottom, rgb(1, 1, 153), rgb(18, 18, 35));
+  background: linear-gradient(to bottom, rgb(0, 0, 189), rgb(18, 18, 35));
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -13,11 +13,15 @@
   flex: 1;
   overflow-y: hidden;
   margin-top: 25px;
+  will-change: contents;
   //background: red;
 }
 
  @media screen and (max-width: 1200px) {
   .main-content {
+    flex: 1;
+    margin-top: 0px;
+    background: linear-gradient(to bottom, rgb(0, 0, 126), rgb(18, 18, 35))
     //margin-bottom: 10px;
   }
  }

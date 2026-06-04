@@ -1,0 +1,17 @@
+{
+    "Languages": [
+        {
+            "language": ["English", "Java", "C++", "C", "C#", "R", "Python", "Angular", "Golang", "React/React Native", "MIPS", "UNIX/LINUX", "SQL", "MatLab"]
+        }
+    ],
+    "Tools": [
+        {
+            "tool": ["Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "PowerBI", "Google Workspace", "Canvas", "Canva"]
+        }
+    ], 
+    "Certifications":[
+        {
+            "certification": ["Educators Certificate #321740", "Adobe Premiere Pro CC 2017"]
+        }
+    ]
+}

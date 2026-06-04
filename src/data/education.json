@@ -1,0 +1,36 @@
+{
+    "education": [
+        {
+            "school": "University of South Carolina",
+            "degree": "Masters of Secondary Education",
+            "minors": [],
+            "location": "Columbia, SC",
+            "startDate": "May 2023",
+            "endDate": "May 2024",
+            "cover": "/education/usc_logo_2.png",
+            "gpa": "4.00"
+        },
+         
+        {
+            "school": "University of South Carolina",
+            "degree": "BS Computer Science",
+            "minors": ["Mathematics", "Secondary Education", "Media Arts"],
+            "location": "Columbia, SC",
+            "startDate": "August 2019",
+            "endDate": "May 2023",
+            "cover": "/education/usc_logo_2.png",
+            "gpa": "3.89"
+        },
+        
+        {
+            "school": "Nease High School",
+            "degree": "IB Diploma",
+            "minors": [],
+            "location": "Ponte Vedra, FL",
+            "startDate": "August 2015",
+            "endDate": "May 2019",
+            "cover": "/education/nease_logo.png",
+            "gpa": "4.34"
+        }
+    ]
+}
