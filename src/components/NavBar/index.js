@@ -174,19 +174,51 @@ const NavBar = () => {
   const [showNav, setShowNav] = useState(false);
   //const [showNav, setShowNav] = useState(false);
     const [showBurger, setBurger] = useState(true);
-    const toggleNav = () => {
+    const toggleNav = (nav) => {
         setShowNav(!showNav);
         setBurger(!showBurger);
+        toggle(nav);
+    }
+    const navOptions = ["Home", "About Me", "Resume", "Portfolio", "Contact Me"];
+    const [selectedNav, setSelectedNav] = useState(null);
+    const toggle = (idx) => {
+        // if(selectedNav === idx) {
+        //     return setSelectedNav(null);
+        // }
+        setSelectedNav(idx);
+    }
+
+    const displayNavOptions = (navOptions) => {
+        return (
+            <ul className="nav-list">
+                {
+                    navOptions.map((nav) => (
+                        
+                        <div className={selectedNav === nav ? 'selected-nav' : 'not-selected'}>
+                            <li className={selectedNav === nav ? 'selected-nav-item' : ''}>
+                                <Link disabled={selectedNav === nav} className={selectedNav === nav ? 'selected-nav-link' : 'nav-link'} to = {nav} onClick={selectedNav === nav ? '' : () => toggleNav(nav) }>
+                                    {nav} 
+                                </Link>
+                                
+                            </li>
+                            <div className={selectedNav === nav ? 'selected-nav-slider' : 'no-slider'}></div>
+                        </div>
+                    ))
+                }
+            </ul>
+        );
     }
 
   return (
     <div className="nav-bar">
-         <Link 
-        className="logo"
-        to="/"
-        onClick={() => setShowNav(false)}>
-        <span><h1><ul><li> Sam_ </li><li>Lowry</li></ul></h1></span>
-      </Link>
+        <div className="logo-box">
+            <Link 
+            className="logo"
+            to="/"
+            onClick={() => setShowNav(false)}>
+            <span><h1><ul><li> Sam_ </li><li>Lowry</li></ul></h1></span>
+        </Link>
+      </div>
 
       <Link 
         className="mini-logo"
@@ -203,39 +235,44 @@ const NavBar = () => {
            className='hamburger-icon'/>
 
          <nav className={showNav ? 'mobile-show' : ''}>
-            <ul>
-                <li>
-                    <Link className = 'nav-link' to = '/' onClick={toggleNav}>
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link className = 'nav-link' to = '/about' onClick={toggleNav}>
-                        About Me
-                    </Link>
-                </li>
+            {displayNavOptions(navOptions)}
 
+            {/* <ul>
+                <div className={selectedNav === "Home" ? 'selected-nav' : ''}>
+                    <li>
+                        <Link className = 'nav-link' to = '/' onClick={() => toggleNav("Home")}>
+                            Home
+                        </Link>
+                    </li>
+                </div>
+                <div> 
+                    <li>
+                        <Link className = 'nav-link' to = '/about' onClick={() => toggleNav("About Me")}>
+                            About Me
+                        </Link>
+                    </li>
+                </div>
                 <li>
-                    <Link className = 'nav-link' to = '/resume' onClick={toggleNav}>
+                    <Link className = 'nav-link' to = '/resume' onClick={() => toggleNav("Resume")}>
                         Resume
                     </Link>
                 </li>
                 
                 <li>
-                    <Link className = 'nav-link' to = '/portfolio' onClick={toggleNav}>
+                    <Link className = 'nav-link' to = '/portfolio' onClick={() => toggleNav("Portfolio")}>
                         Portfolio
                     </Link>
                 </li>
 
                 <li>
-                    <Link className = 'nav-link' to = '/contact' onClick={toggleNav}>
+                    <Link className = 'nav-link' to = '/contact' onClick={() => toggleNav("Contact Me")}>
                         Contact Me
                     </Link>
                 </li>
             </ul>
-            
+             */}
             <FontAwesomeIcon
-                    onClick={toggleNav}
+                    onClick={() => setShowNav(false)}
                     icon={faClose}
                     color='yellow'
                     size = "3x"
