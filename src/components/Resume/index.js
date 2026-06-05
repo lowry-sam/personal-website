@@ -229,7 +229,7 @@ const Resume = () => {
                 <h1>Education, Work Experiences, and Skills</h1>
                 <div className="title-description">
                     <p>Below you will find my relevant education, work experiences, and skills and abilities.</p>
-                    <p>Use the dropdown menus to navigate!</p>
+                    <p>Use the dropdown menus to explore!</p>
                 </div>
                 <hr/>
                 <h1 className="secondary-title">Education</h1>

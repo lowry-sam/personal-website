@@ -1,3 +1,5 @@
+
+
 .resume {
     margin-top: 50px;
     overflow-y: scroll;
@@ -8,8 +10,10 @@
 
     will-change:inherit;
     transform-style: preserve-3d;
-    animation: fadeIn 4s forwards;
-    animation-delay: 0s;
+    opacity: 0;
+    
+    animation: fadeInUp 2s 1s;
+    animation-fill-mode: forwards;
 
    
 
@@ -470,14 +474,15 @@
             width: 33%;
             display: inline;
             overflow-y: scroll;
-            margin-top: 30px;
+            //margin-top: 30px;
             position: inherit;
             margin: 10px 20px;
             align-items: center;
             justify-content: center;
             text-align: center;
             overflow-x: hidden;
-            margin-left:20px;
+            //margin-left:20px;
+            margin-bottom: 0px;
 
             @media screen and (max-width: 1000px){
                 //flex-direction: column;
@@ -507,6 +512,8 @@
                     justify-content: center;
                     align-items: center;
                     width: 100%;
+                    padding: 20px 20px;
+                    margin-bottom: 0px;
                 }
                 
                 @media screen and (max-width: 1000px){
@@ -577,7 +584,10 @@
                     //background-color: red;
                     flex-wrap: wrap;
 
-                    
+                    @media screen and (max-width: 1000px){
+                        //width: 80%;
+                        padding-bottom: 0px;
+                    }
                 }
 
                 .certs-span {
@@ -621,10 +631,33 @@
  @media screen and (max-width: 1200px) {
     .resume {
         height: auto;
-
+        //background: red;
         .box {
             min-height: 70vh;
+
+            
         }
+    }
+    .render-education {
+        //margin-left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25px;
+    }
+    .education-container {
+        //display: block;
+        justify-content: center;
+       //background-color: green;
+        align-items: center;
+        margin-left: 300px;
+        padding: 50px 30px;
+        .education-box {
+                max-width: 60%;
+                margin-left: 30px;
+                padding: 50px 30px;
+                
+            }
     }
  }
 

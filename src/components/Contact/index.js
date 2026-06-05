@@ -53,16 +53,18 @@ return (
             <AnimatedLetters
               letterClass={letterClass}
               strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
-              idx={15}
+              idx={15} className="page-title"
             />
           </h1>
-          <p>
-            I am interested in bettering my skills as a Data Analyst and Software Developer. I am
-            open to remote and in-person opportunities in the Chicagoland area. 
-          </p>
-          <p>
-            Please reach out to me either by email, phone, or by filling out the form below!
-          </p>
+          <div className="explaination-zone">
+            <p>
+              I am interested in bettering my skills as a Data Analyst, Software Developer, and Technical Trainer. 
+              I am open to remote and in-person opportunities in the Chicagoland area.
+            </p>
+            <p className="bold">
+              Please reach out to me either by email, phone, or by filling out the form below!
+            </p>
+          </div>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
               <ul>
@@ -86,35 +88,40 @@ return (
                   />
                 </li>
                 <li>
-                  <textarea
-                    placeholder="Message"
-                    name="message"
-                    required
-                  ></textarea>
+                  <div className="messanger-container">
+                    <textarea
+                      className="messanger-box"
+                      placeholder="Message"
+                      name="message"
+                      required
+                    ></textarea>
+                  </div>
                 </li>
                 <li>
-                  <input type="submit" className="flat-button" value="SEND" />
+                  <input type="submit" className="flat-button" value="SEND!" />
                 </li>
               </ul>
             </form>
           </div>
         </div>
-        <div className="info-map">
-          Sam Lowry
-          <br />
-          Chicago, IL 60612
-          <br />
-          USA <br />
-          <br />
-          <span>slowry44@me.com</span>
-        </div>
-        <div className="map-wrap">
-          <MapContainer center={[41.882629, -87.623474]} zoom={30}>
-            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[41.882629, -87.623474]}>
-              <Popup>A recent Chicago resident!</Popup>
-            </Marker>
-          </MapContainer>
+        <div className="map-section">
+          <div className="info-map">
+            Sam Lowry
+            <br />
+            Chicago, IL 60612
+            <br />
+            USA <br />
+            <br />
+            <span>slowry44@me.com</span>
+          </div>
+          <div className="map-wrap">
+            <MapContainer center={[41.882629, -87.623474]} zoom={30}>
+              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              <Marker position={[41.882629, -87.623474]}>
+                <Popup>A recent Chicago resident!</Popup>
+              </Marker>
+            </MapContainer>
+          </div>
         </div>
        
       </div>
