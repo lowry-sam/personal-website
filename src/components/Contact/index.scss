@@ -146,12 +146,18 @@
       float: right;
       text-align: center;
       margin-right: 15px;
+      
 
       &:hover {
         cursor: pointer;
         background-color: white;
         color: black;
       }
+    }
+
+    .flat-button-item {
+      animation: backInRight 2s 1.75s;
+      animation-fill-mode: forwards;
     }
   }
   
@@ -227,7 +233,7 @@
 
     .info-map {
       top: 13%;
-      width: 100px;
+      width: 150px;
       padding: 15px 15px;
       animation: fadeIn 1s 1.5s;
       animation-fill-mode: forwards;

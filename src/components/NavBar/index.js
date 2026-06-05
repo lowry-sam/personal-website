@@ -8,6 +8,8 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { useState, useRef } from 'react'
+
+import { useLocation } from 'react-router-dom'
 //import { AiOutlineClose, AiOutlineMenuUnfold } from 'reach-icons/ai'
 
 //const Sidebar = () => {
@@ -180,13 +182,21 @@ const NavBar = () => {
         toggle(nav);
     }
     const navOptions = ["Home", "About Me", "Resume", "Portfolio", "Contact Me"];
-    const [selectedNav, setSelectedNav] = useState(null);
+    const location = useLocation();
+    let result = location.pathname.replace("/", "");
+    let realLocation = result.replace("%20", " ");
+    if ((realLocation === "")) {
+        realLocation = "Home";
+    }
+    const [selectedNav, setSelectedNav] = useState(realLocation);
     const toggle = (idx) => {
         // if(selectedNav === idx) {
         //     return setSelectedNav(null);
         // }
         setSelectedNav(idx);
     }
+
+    
 
     const displayNavOptions = (navOptions) => {
         return (
@@ -197,7 +207,7 @@ const NavBar = () => {
                         <div className={selectedNav === nav ? 'selected-nav' : 'not-selected'}>
                             <li className={selectedNav === nav ? 'selected-nav-item' : ''}>
                                 <Link disabled={selectedNav === nav} className={selectedNav === nav ? 'selected-nav-link' : 'nav-link'} to = {nav} onClick={selectedNav === nav ? '' : () => toggleNav(nav) }>
-                                    {nav} 
+                                    {nav}
                                 </Link>
                                 
                             </li>
@@ -210,12 +220,14 @@ const NavBar = () => {
     }
 
   return (
+    
     <div className="nav-bar">
         <div className="logo-box">
             <Link 
             className="logo"
             to="/"
-            onClick={() => setShowNav(false)}>
+            onClick={() => setShowNav(false)}
+            onClick={() => toggleNav("Home")}>
             <span><h1><ul><li> Sam_ </li><li>Lowry</li></ul></h1></span>
         </Link>
       </div>
@@ -223,7 +235,8 @@ const NavBar = () => {
       <Link 
         className="mini-logo"
         to="/"
-        onClick={() => setShowNav(false)}>
+        onClick={() => setShowNav(false)}
+        onClick={() => toggleNav("Home")}>
         <span><h1> Sam_ Lowry</h1></span>
       </Link>
 
