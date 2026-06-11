@@ -1,4 +1,13 @@
-import LogoPic from '../../assets/profile.png'
+import Profile from '../../assets/image-gallery/profile.png'
+import Profile2 from '../../assets/image-gallery/profile2.png'
+import Profile3 from '../../assets/image-gallery/profile3new.jpg'
+import Profile4 from '../../assets/image-gallery/profile4.jpg'
+import Profile5 from '../../assets/image-gallery/profile5.jpg'
+import Profile6 from '../../assets/image-gallery/profile6.jpg'
+import Profile7 from '../../assets/image-gallery/profile7.jpg'
+import Profile8 from '../../assets/image-gallery/profile8.jpg'
+import Profile9 from '../../assets/image-gallery/profile9new.jpg'
+import Profile10 from '../../assets/image-gallery/profile10.jpg'
 import { Link } from 'react-router-dom';
 import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
@@ -8,11 +17,14 @@ import Loader from 'react-loaders';
 // import { CircleLoader } from 'react-spinners';
 import { Pinwheel } from 'ldrs/react'
 import 'ldrs/react/Pinwheel.css'
+import Footer from '../Footer';
+//import { setNav } from '../NavBar'
+import NavBar from '../NavBar'
 //import ReactLoading from 'react-loading'
 
 const Home = () => {
-    const [ letterClass, setLetterClass] = useState('text-animate')
-    const nameArray = ['S', 'a', 'm', ' ', 'L', 'o', 'w', 'r', 'y']
+    const [ letterClass, setLetterClass ] = useState('text-animate')
+    const nameArray = "Sam Lowry".split('')
     const jobArray = "Data Analyst".split('')
 
     const doSomething = async() =>{
@@ -32,38 +44,112 @@ const Home = () => {
                 <div className="text-zone">
                 <h1>
                     <span className={letterClass}>H</span>
-                    <span className={`${letterClass} _12`}>i,</span>
+                    <span className={`${letterClass} _12`}>e</span>
+                    <span className={`${letterClass} _13`}>l</span>
+                    <span className={`${letterClass} _14`}>l</span>
+                    <span className={`${letterClass} _15`}>o</span>
+                    <span className={`${letterClass} _16`}>!</span>
                     <br />
-                    <span className={`${letterClass} _13`}>I</span>
-                    <span className={`${letterClass} _14`}>'m</span>
-                    <img
+                    <span className={`${letterClass} _17`}>I</span>
+                    <span className={`${letterClass} _18`}>'m</span>
+                    {/* <img
                     src={LogoPic}
                     alt="JavaScript Developer Name, Web Developer Name"
-                    />
-                    <AnimatedLetters
-                    letterClass={letterClass}
-                    strArray={nameArray}
-                    idx={15}
-                    />
+                    /> */}
+                    <span className='name'> 
+                        <AnimatedLetters
+                        letterClass={letterClass}
+                        strArray={nameArray}
+                        idx={15}/>
+                    </span>
+                    
                     <br />
-                    <AnimatedLetters
+                    {/* <AnimatedLetters
                     letterClass={letterClass}
                     strArray={jobArray}
                     idx={22}
-                    />
+                    /> */}
                 </h1>
                 <h2>Data Analyst / Software Developer / Technical Trainer</h2>
-                <Link to="/contact" className="flat-button">
+                <div className="further-explanation">
+                    <p className="first-text">This website is to demonstrate my aptitude in Data Analytics, Software Development, and Technical Training.</p>
+                    <span className="some-text"><p>Please explore this site using the </p><p className='nav-bar-text'> Nav Bar </p><p> above and feel free to </p><p className='contact-me-text'>Contact Me</p><p> so we can discuss how I may serve your team best!</p></span>
+                </div>
+                
+                <Link to="/Contact%20Me" className="flat-button" >
                     CONTACT ME
                 </Link>
                 </div>
-                <Logo />
+                {/* <Logo /> */}
+
+                <div className='pictures-zone'>
+                    <div className='hover-image'>
+                        <img 
+                            src={Profile2}
+                            alt="pictures of Sam"
+                            className="picture1"
+                        />
+                        <img 
+                            src={Profile}
+                            alt="pictures of Sam"
+                            className="picture2"
+                        />
+                        <img 
+                            src={Profile3}
+                            alt="pictures of Sam"
+                            className="picture3"
+                        />
+                        <img 
+                            src={Profile4}
+                            alt="pictures of Sam"
+                            className="picture4"
+                        />
+                        <img 
+                            src={Profile5}
+                            alt="pictures of Sam"
+                            className="picture5"
+                        />
+                        <img 
+                            src={Profile6}
+                            alt="pictures of Sam"
+                            className="picture6"
+                        />
+                        <img 
+                            src={Profile7}
+                            alt="pictures of Sam"
+                            className="picture7"
+                        />
+                        <img 
+                            src={Profile8}
+                            alt="pictures of Sam"
+                            className="picture8"
+                        />
+                        <img 
+                            src={Profile9}
+                            alt="pictures of Sam"
+                            className="picture9"
+                        />
+                        <img 
+                            src={Profile10}
+                            alt="pictures of Sam"
+                            className="picture10"
+                        />
+                    </div>
+                    <div className='suggestion-zone'> 
+                        <p className="user-suggestion"> If you click and hold, the gallery will move quicker.</p>
+                    </div>
+                    
+                </div>
+                
+                
             </div>
+
+            
             <Loader type='ball-scale-ripple-multiple'/>
             {/* <CircleLoader/> */}
             
             {/* <ReactLoading type="balls"/> */}
-            
+            <Footer/>
         </>
     );
 }

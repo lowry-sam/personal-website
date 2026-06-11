@@ -9,6 +9,11 @@
   opacity: 0;
   animation: fadeIn 1s 1s;
   animation-fill-mode: forwards;
+  min-height: 80vh;
+
+  @media screen and (max-width: 1200px) {
+    margin-top: 70px;
+  }
 
   h1 {
     margin:10px 20px;
@@ -42,14 +47,20 @@
 
 
 .text-zone {
-  //background-color: blue;
+  //background-color: red;
   width: 48%;
   padding: 20px 10px;
   margin-left: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .map-section {
   width: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   //background: yellow;
 }
 
@@ -132,13 +143,13 @@
     }
   
     .flat-button {
-      color: white;
+      color: yellow;
       font-size: 11px;
       letter-spacing: 3px;
       text-decoration: none;
       padding: 8px 8px;
       padding-right: 6px;
-      border: 1px solid white;
+      border: 1px solid yellow;
       float: left;
       border-radius: 4px;
       background: 0 0;
@@ -150,7 +161,7 @@
 
       &:hover {
         cursor: pointer;
-        background-color: white;
+        background-color: yellow;
         color: black;
       }
     }
@@ -177,7 +188,7 @@
     opacity: 0;
     animation: backInRight 1s 1.2s;
     animation-fill-mode: forwards;
-    border: #000 solid 2px;
+    border: yellow solid 2px;
     border-radius: 20px;
   }
   
@@ -206,9 +217,15 @@
     }
   }
 
+  @media screen and (max-width: 1250px) {
+    .map-wrap {
+      height: 90%;
+    }
+  }
+
   @media screen and (max-width: 1200px) {
     .contact-page {
-      min-height: 85vh;
+      min-height: 88vh;
       transition: 0.1s;
     }
     .text-zone {
@@ -221,7 +238,9 @@
       //height: 400px;
       //margin: 0;
       margin-left: 0px;
+      margin-top: -10px;
       //background: yellow;
+      height: 90%;
 
       .leaflet-container {
         margin-left: 0px;
@@ -241,6 +260,12 @@
     }
   }
 
+  @media screen and (max-width: 1100px) {
+    .map-wrap {
+      height: 90%;
+    }
+  }
+
   @media screen and (max-width: 800px) {
     .contact-page {
       display: flex;
@@ -248,28 +273,34 @@
       overflow-y: scroll;
       overflow-x: hidden;
       flex-direction: column;
+      margin-top: 30px;
       //background-color: orange;
       //min-height: 500px;
       
       .text-zone, .map-wrap, .leaflet-container {
         width: 95%;
         height: 100%;
+        margin-top: 20px;
        // min-height: 1000px;
       }
 
       .text-zone {
-        padding-bottom: 500px;
+        padding-bottom: 700px;
       }
 
       p {
         font-size: 12px;
       }
 
+      .map-section {
+        display: block;
+      }
+
       .map-wrap {
         position: absolute;
-        top: 80%;
+        top: 58%;
         height: 75%;
-        width: 96%;
+        width: 98%;
       }
 
       .info-map {

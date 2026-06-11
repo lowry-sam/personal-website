@@ -4,7 +4,8 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../Footer';
 import Spinner from '../Spinner';
 import { useEffect, useState } from 'react';
-import {AnimatePresence} from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import { useLocation } from 'react-router-dom'
 
 
 
@@ -16,6 +17,12 @@ const Layout = () => {
             setShowSpinner(false)
         }, 2000)
     }, []);
+    const location = useLocation();
+    let result = location.pathname.replace("/", "");
+    let realLocation = result.replace("%20", " ");
+    if ((realLocation === "")) {
+        realLocation = "Home";
+    }
 
     return (
         <>
@@ -25,7 +32,7 @@ const Layout = () => {
                     showSpinner ? (<Spinner/> ):( */}
                         <div>
                     
-                            <NavBar/>
+                            <NavBar navigation={realLocation}/>
                             
                             <div className="main-content"> <Outlet/></div>
                         

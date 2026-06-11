@@ -8,8 +8,11 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { useState, useRef } from 'react'
-
 import { useLocation } from 'react-router-dom'
+
+
+
+
 //import { AiOutlineClose, AiOutlineMenuUnfold } from 'reach-icons/ai'
 
 //const Sidebar = () => {
@@ -142,7 +145,7 @@ import { useLocation } from 'react-router-dom'
    // }
     //</>
 
-const NavBar = () => {
+const NavBar = ({navigation}) => {
 
     // const [menu, setMenu] = useState(false)
     // const handleChange = () => {
@@ -173,22 +176,18 @@ const NavBar = () => {
     // )
 
 
-  const [showNav, setShowNav] = useState(false);
-  //const [showNav, setShowNav] = useState(false);
+    const [showNav, setShowNav] = useState(false);
+    //const [showNav, setShowNav] = useState(false);
     const [showBurger, setBurger] = useState(true);
     const toggleNav = (nav) => {
         setShowNav(!showNav);
         setBurger(!showBurger);
         toggle(nav);
     }
+    
     const navOptions = ["Home", "About Me", "Resume", "Portfolio", "Contact Me"];
-    const location = useLocation();
-    let result = location.pathname.replace("/", "");
-    let realLocation = result.replace("%20", " ");
-    if ((realLocation === "")) {
-        realLocation = "Home";
-    }
-    const [selectedNav, setSelectedNav] = useState(realLocation);
+    
+    const [selectedNav, setSelectedNav] = useState(navigation);
     const toggle = (idx) => {
         // if(selectedNav === idx) {
         //     return setSelectedNav(null);
@@ -204,14 +203,14 @@ const NavBar = () => {
                 {
                     navOptions.map((nav) => (
                         
-                        <div className={selectedNav === nav ? 'selected-nav' : 'not-selected'}>
-                            <li className={selectedNav === nav ? 'selected-nav-item' : ''}>
-                                <Link disabled={selectedNav === nav} className={selectedNav === nav ? 'selected-nav-link' : 'nav-link'} to = {nav} onClick={selectedNav === nav ? '' : () => toggleNav(nav) }>
+                        <div className={navigation === nav ? 'selected-nav' : 'not-selected'}>
+                            <li className={navigation === nav ? 'selected-nav-item' : ''}>
+                                <Link disabled={navigation === nav} className={navigation === nav ? 'selected-nav-link' : 'nav-link'} to = {nav} onClick={navigation === nav ? '' : () => toggleNav(nav) }>
                                     {nav}
                                 </Link>
                                 
                             </li>
-                            <div className={selectedNav === nav ? 'selected-nav-slider' : 'no-slider'}></div>
+                            <div className={navigation === nav ? 'selected-nav-slider' : 'no-slider'}></div>
                         </div>
                     ))
                 }

@@ -83,7 +83,7 @@ const Resume = () => {
                     education.map((edu) => {
                         return (
                             <div className='education-box'>
-                                <div className='education-title'>
+                                <div className={edu.school==="University of South Carolina" ? 'education-title'  : 'education-title-nease' }>
                                     <h1 className={edu.school==="University of South Carolina" ? 'name-usc' : 'name-other'}>{edu.school} </h1>
                                     <img className={edu.school==="University of South Carolina" ? 'img-usc' : 'img-other'} src={edu.cover}/>
                                 </div>
@@ -238,7 +238,7 @@ const Resume = () => {
                         {renderEducatione(educationData.education)}
                     </div>
                 </div>
-                <hr/>
+                <hr className='alternate-side'/>
                 <h1 className="secondary-title">Work Experiences</h1>
                 <div className='box'> 
                     

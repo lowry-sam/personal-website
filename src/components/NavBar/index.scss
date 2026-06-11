@@ -314,7 +314,7 @@
       //padding: 8px 20px;
       text-decoration: none;
       color: white;
-      font-size: 15px;
+      font-size: 20px;
       font-family:Georgia, 'Times New Roman', Times, serif;
       justify-content: right;
       //flex-direction: row;
@@ -344,7 +344,7 @@
           align-items: center;
           //background-color: blue;
           li {
-            font-size: 15px;
+            font-size: 17px;
           }
         }
 
@@ -437,14 +437,22 @@
           .selected-nav-item {
               color: white;
               position: inherit;
-              transform: translateY(30%);
-              transition: 0s ease-in-out;
+              transform: translateY(60%);
+              transition: 0.0000001s ease-in-out;
               //background-color: green;
               //padding-top:20%;
               //height: 90%;
 
+              @media screen and (max-width: 2500px)  {
+                transform: translateY(100%);
+              }
+
+              @media screen and (max-width: 1500px)  {
+                transform: translateY(60%);
+              }
+
               @media screen and (max-width: 1200px)  {
-                transform: translateY(62%);
+                transform: translateY(100%);
               }
             }
 

@@ -24,7 +24,7 @@ const Footer = () => {
                     
                     <li className='footer-icon'>
                         <a
-                            href="/contact"
+                            href="/Contact%20Me"
                             className='email'
                         > slowry44@me.com
                             <FontAwesomeIcon
@@ -34,7 +34,7 @@ const Footer = () => {
                             />
                         </a>  
                         <a
-                            href="/contact"
+                            href="/Contact%20Me"
                             
                         > | 843-801-5911
                             <FontAwesomeIcon
