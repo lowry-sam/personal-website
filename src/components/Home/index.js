@@ -21,6 +21,7 @@ import Footer from '../Footer';
 //import { setNav } from '../NavBar'
 import NavBar from '../NavBar'
 //import ReactLoading from 'react-loading'
+import bracket from '../../assets/bracket-inverted-bordered-new.png'
 
 const Home = () => {
     const [ letterClass, setLetterClass ] = useState('text-animate')
@@ -41,6 +42,14 @@ const Home = () => {
         <>
         <Loader type="line-scale" active/>
             <div className="container home-page">
+                <div className='nav-bar-location'>
+                    <div className='bracket'>
+                        <img src={bracket}/>
+                    </div>
+                    <div className='nav-bar-descriptor'>
+                        <h3>Nav Bar!</h3>
+                    </div>
+                </div>
                 <div className="text-zone">
                 <h1>
                     <span className={letterClass}>H</span>
@@ -71,14 +80,29 @@ const Home = () => {
                     /> */}
                 </h1>
                 <h2>Data Analyst / Software Developer / Technical Trainer</h2>
-                <div className="further-explanation">
-                    <p className="first-text">This website is to demonstrate my aptitude in Data Analytics, Software Development, and Technical Training.</p>
-                    <span className="some-text"><p>Please explore this site using the </p><p className='nav-bar-text'> Nav Bar </p><p> above and feel free to </p><p className='contact-me-text'>Contact Me</p><p> so we can discuss how I may serve your team best!</p></span>
+                <div className='parent-wrapper'>
+                    <div className="further-explanation">
+                        <p className="first-text">This website is to demonstrate my aptitude in Data Analytics, Software Development, and Technical Training.</p>
+                        <span className="some-text">
+                            <p>Please explore this site using the </p>
+                            <div><p className='nav-bar-text'> Nav Bar </p></div>
+                            <p> above and feel free to</p>
+                        
+                            <div className='contact-me-text-wrapper'>
+                                <p className='contact-me-text'>Contact Me</p>
+                            </div>
+                        
+                            <p> so we can discuss how I may serve your team best!</p>
+                        </span>
+                    </div>
+                    
+                    <div className='contact-button'>
+                        <Link to="/Contact%20Me" className="flat-button" >
+                            CONTACT ME
+                        </Link>
+                    </div>
                 </div>
-                
-                <Link to="/Contact%20Me" className="flat-button" >
-                    CONTACT ME
-                </Link>
+
                 </div>
                 {/* <Logo /> */}
 

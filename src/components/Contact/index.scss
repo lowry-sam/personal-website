@@ -2,6 +2,7 @@
   //background-color: red;
   margin-top: 50px;
   display: flex;
+  //align-items: center;
   justify-content: space-around;
   height: auto;
   overflow-y: scroll;
@@ -157,12 +158,15 @@
       float: right;
       text-align: center;
       margin-right: 15px;
+      transition: 0.1s ease-in-out;
       
 
       &:hover {
         cursor: pointer;
         background-color: yellow;
         color: black;
+        transform: translateY(-1px) translateX(1px);
+        transition: 0.1s ease-in-out;
       }
     }
 
@@ -175,10 +179,11 @@
   .map-wrap {
     //background: rgba(8, 253, 216, 0.1);
     float: right;
+    margin-top: -30px;
     width: 95%;
-    height: 89%;
+    height: 85%;
     //margin-top: -3%;
-    padding: 20px 20px;
+    //padding: 20px 20px;
   }
   
   .leaflet-container {
@@ -188,7 +193,7 @@
     opacity: 0;
     animation: backInRight 1s 1.2s;
     animation-fill-mode: forwards;
-    border: yellow solid 2px;
+    border: yellow solid 10px;
     border-radius: 20px;
   }
   
@@ -196,7 +201,7 @@
     position: absolute;
     background: #000;
     top: 17%;
-    right: 10px;
+    right: 0px;
     z-index: 1;
     width: 150px;
     padding: 20px;
@@ -304,7 +309,7 @@
       }
 
       .info-map {
-        top: 85%;
+        top: 65%;
         animation: fadeIn 1s 1.5s;
         animation-fill-mode: forwards;
       }

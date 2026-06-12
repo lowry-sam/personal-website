@@ -9,6 +9,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { useState, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
+import logo from '../../assets/logo.png'
 
 
 
@@ -223,21 +224,31 @@ const NavBar = ({navigation}) => {
     <div className="nav-bar">
         <div className="logo-box">
             <Link 
+                to="/"
+                onClick={() => setShowNav(false)}
+                onClick={() => toggleNav("Home")}>
+                <img 
+                    alt="website logo"
+                    src={logo}
+                    className="logo"
+                    />
+            </Link>
+            {/* <Link 
             className="logo"
             to="/"
             onClick={() => setShowNav(false)}
             onClick={() => toggleNav("Home")}>
             <span><h1><ul><li> Sam_ </li><li>Lowry</li></ul></h1></span>
-        </Link>
-      </div>
+        </Link> */}
+        </div>
 
-      <Link 
+      {/* <Link 
         className="mini-logo"
         to="/"
         onClick={() => setShowNav(false)}
         onClick={() => toggleNav("Home")}>
         <span><h1> Sam_ Lowry</h1></span>
-      </Link>
+      </Link> */}
 
       <FontAwesomeIcon 
            onClick={() => setShowNav(true)}

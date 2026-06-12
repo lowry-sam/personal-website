@@ -42,7 +42,7 @@ const Resume = () => {
                                                     <h4 className="position" >{job.title} </h4>
                                                     <h4 className="company">{job.company}</h4>
                                                 </div>
-                                                <span className='arrow'>{selected === job.title ? '↓' : '↑' }</span>
+                                                <span className='arrow'><h3>{selected === job.title ? '↓' : '↑' }</h3></span>
                                             </div>
                                             <div className={selected === job.title ? 'content-show' : 'content'} >
                                                 <div className="location"><h4 className="location">Location:</h4> {job.location}</div>
