@@ -22,6 +22,7 @@ import Footer from '../Footer';
 import NavBar from '../NavBar'
 //import ReactLoading from 'react-loading'
 import bracket from '../../assets/bracket-inverted-bordered-new.png'
+import arrow from '../../assets/arrow-inverted.png'
 
 const Home = () => {
     const [ letterClass, setLetterClass ] = useState('text-animate')
@@ -38,6 +39,40 @@ const Home = () => {
          doSomething();
     },[])
 
+    const box = document.querySelector('.nav-bar-location');
+    let hoverCount = 0;
+
+    box?.addEventListener('mouseenter', () => {
+        hoverCount++;
+
+        if (hoverCount === 1) {
+            box.classList.add('first-action');
+            //box.textContent = "Hover me one more time...";
+        } 
+        
+        else if (hoverCount > 2) {
+            //box.classList.remove('first-action');
+            box.classList.add('second-action');
+        }
+    });
+
+    const box2 = document.querySelector('.nav-bar-location-mobile');
+    let hoverCount2 = 0;
+
+    box2?.addEventListener('mouseenter', () => {
+        hoverCount2++;
+
+        if (hoverCount2 === 1) {
+            box2.classList.add('first-action');
+            //box.textContent = "Hover me one more time...";
+        } 
+        
+        else if (hoverCount2 > 2) {
+            //box.classList.remove('first-action');
+            box2.classList.add('second-action');
+        }
+    });
+
     return (
         <>
         <Loader type="line-scale" active/>
@@ -48,6 +83,16 @@ const Home = () => {
                     </div>
                     <div className='nav-bar-descriptor'>
                         <h3>Nav Bar!</h3>
+                        
+                    </div>
+                </div>
+                <div className='nav-bar-location-mobile'>
+                    <div className='nav-bar-descriptor-mobile'>
+                        <h3>Navigate!</h3>
+                        
+                    </div>
+                    <div className='nav-bar-descriptor-mobile-arrow'>
+                        <img src={arrow}/>
                     </div>
                 </div>
                 <div className="text-zone">

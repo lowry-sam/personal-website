@@ -144,15 +144,7 @@
 
         
       
-        h2 {
-          color: #8d8d8d;
-          margin-top: 20px;
-          font-weight: 400;
-          font-size: 11px;
-          font-family: sans-serif;
-          letter-spacing: 3px;
-          animation: fadeIn 1s 1.8s backwards;
-        }
+        
 
         
       
@@ -182,6 +174,16 @@
         }
       }
     }
+
+    h2 {
+          color: rgb(118, 118, 118);
+          //margin-top: 20px;
+          font-weight: 600;
+          font-size: 13px;
+          font-family: sans-serif;
+          letter-spacing: 3px;
+          animation: fadeIn 1s 1.8s backwards;
+        }
 
     .pictures-zone {
       //margin-left: -20px;
@@ -491,9 +493,14 @@
       z-index: 999999;
       opacity: 0;
 
-      animation: fadeIn 1s ease-in-out;
+      animation: customFadeIn 1s ease-in-out;
       animation-fill-mode: forwards;
       animation-delay: 8s;
+
+      pointer-events: auto;
+      //animation-play-state: paused;
+
+      
       //background: red;
     .bracket {
       
@@ -503,7 +510,53 @@
         //background-color: white;
         width: 40vw;
         height: 90px;
+
+        // &:hover {
+        //   pointer-events: none;
+        // }
         
+      }
+    }
+
+
+    
+
+    &:hover {
+      // animation: fadeOut 1s ease-in-out;
+      // animation-fill-mode: forwards;
+      // opacity: 1;
+      //animation-play-state: running;
+      //pointer-events:;
+      //visibility: hidden;
+    }
+
+    @keyframes permanentFade {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+        pointer-events: auto;
+      }
+      100% {
+        opacity: 0;
+        pointer-events: auto;
+        //visibility: hidden;
+      }
+    }
+
+    @keyframes customFadeIn {
+      0% {
+        opacity: 0;
+        pointer-events: none;
+      }
+      99% {
+        opacity: 1;
+        pointer-events: none;
+      }
+      100% {
+        opacity: 1;
+        pointer-events: auto;
       }
     }
 
@@ -519,7 +572,30 @@
         font-weight: bold;
       }
     }
+
+    
   }
+
+  .nav-bar-location-mobile {
+      display: none;
+    }
+
+  .nav-bar-location.first-action {
+    animation: fadeOut 1s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  // .nav-bar-location.second-action {
+  //   animation: fadeOut 1s ease-in-out;
+  //   animation-fill-mode: forwards;
+
+  //   &:hover {
+  //     animation: fadeIn 1s ease-in-out;
+  //     animation-fill-mode: forwards;
+  //     opacity: 1;
+  //   }
+  // }
 
   
   
@@ -621,4 +697,68 @@
     .bracket, .nav-bar-location {
       display: none;
     }
+
+    .nav-bar-location-mobile {
+      display:  flex;
+      position: absolute;
+      flex-direction: row;
+      right: 10vw;
+      top: 10vh;
+      //background-color: orange;
+      //z-index: 3;
+
+      .nav-bar-descriptor-mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        //background-color: red;
+        width: auto;
+        animation: fadeIn 1s ease-in-out forwards;
+        animation-delay: 8s;
+        opacity: 0;
+        //z-index: 3;
+      }
+
+      .nav-bar-descriptor-mobile-arrow {
+        animation: fadeIn 1s ease-in-out forwards;
+        animation-delay: 8s;
+        opacity: 0;
+        position: absolute;
+        //background-color: green;
+        top: -2vh;
+        right: -2.5vw;
+        transform: rotate(-60deg);
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        color: white;
+      }
+
+      h3 {
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+      }
+    }
+
+    .nav-bar-location-mobile.first-action {
+      animation: fadeOut 1s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    // .nav-bar-location-mobile.second-action {
+    //   animation: fadeOut 1s ease-in-out;
+    //   animation-fill-mode: forwards;
+
+    //   &:hover {
+    //     animation: fadeIn 1s ease-in-out;
+    //     animation-fill-mode: forwards;
+    //     opacity: 1;
+    //   }
+    // }
   }

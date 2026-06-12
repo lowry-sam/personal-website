@@ -45,7 +45,7 @@
         overflow-y: scroll;
         scroll-behavior: smooth;
         padding: 0px 0px;
-        margin: 10px 0px;
+        margin: 0px 0px;
         margin-left: 0px;
         justify-content: center;
         align-items: center;
@@ -70,7 +70,7 @@
             border: 2px solid black;
             padding: 10px 20px;
             padding-bottom: 20px;
-            margin: 5px 20px;
+            margin: 0px 20px;
             border-radius: 20px;
             min-height: 220px;
             min-width: 25%;
@@ -517,8 +517,9 @@
     .skills-box {
         display: flex;
         //background-color: red;
-        width: auto;
+        width: 95%;
         height: auto;
+        margin-left: 3vw;
         justify-content: space-between;
         //background-color: green;
         //min-height: 70vh;
