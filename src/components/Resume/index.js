@@ -9,7 +9,7 @@ import Spinner from '../Spinner';
 import { useState, useEffect } from 'react'
 
 const Resume = () => {
-    const [ selected, setSelected ] = useState(null);
+    const [ selected, setSelected ] = useState("Application Software Development Intern");
         
         const toggle = (idx) => {
             if(selected === idx) {

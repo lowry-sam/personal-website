@@ -10,7 +10,7 @@
   opacity: 0;
   animation: fadeIn 1s 1s;
   animation-fill-mode: forwards;
-  min-height: 80vh;
+  min-height: 85vh;
 
   @media screen and (max-width: 1200px) {
     margin-top: 70px;
@@ -22,6 +22,7 @@
     font-size: 50px;
     color: white;
     font-family: sans-serif;
+    text-align: left;
 
     
     
@@ -51,10 +52,13 @@
   //background-color: red;
   width: 48%;
   padding: 20px 10px;
-  margin-left: 30px;
+  padding-left: 50px;
+  margin-left: 0px;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .map-section {
@@ -141,6 +145,8 @@
       align-items: flex-start;
       justify-content: flex-start;
       resize: none;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
   
     .flat-button {

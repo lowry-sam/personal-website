@@ -2,7 +2,7 @@
   overflow-y: scroll;
   overflow-x: hidden;
   //background: green;
-  min-height: 80vh;
+  min-height: 85vh;
   align-items: center;
   display: flex;
   padding: 20px 20px;
@@ -78,18 +78,21 @@
       }
 
       .parent-wrapper {
-        align-items: center;
+        align-items: left;
         flex-direction: column;
         display: flex;
-        justify-content: center;
+        justify-content: left;
+        //background-color: red;
 
         .further-explanation {
+          position: relative;
           margin-top: 20px;  
-        // background-color: blue;
+         //background-color: blue;
           max-width: 100%;
-          justify-content: center;
-          align-items: center;
-          align-content: center;
+          justify-content: left;
+          align-items: left;
+          align-content: left;
+          text-align: left;
           display: flex;
           flex-direction: column;
           cursor: default;
@@ -101,17 +104,19 @@
           }
 
           .first-text {
-            align-items: center;
-            text-align: center;
+            align-items: left;
+            text-align: left;
           }
 
           .some-text {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
+            // align-items: center;
+            // justify-content: center;
             margin-top: 5px;
+            align-items: left;
+            text-align: left;
           }
         }
 
@@ -129,8 +134,11 @@
         }
 
         .contact-button {
-          display: block;
+          display: flex;
           //background: green;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
         }
 
         // .contact-me-text-wrapper:hover + .contact-button {
@@ -632,7 +640,7 @@
     
 
     .pictures-zone {
-      //background-color: yellow;
+      background-color: yellow;
       width: 100%;
       // margin-left: 0;
       // margin-right: 0;
@@ -651,12 +659,15 @@
       position: initial;
       min-width: 100%;
       transform: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       //padding: 10px;
       //top: 200px;
       box-sizing: border-box;
-      min-height: 50vh;
+      min-height: 40vh;
       overflow-x: hidden;
-      //background-color: blue;
+      background-color: blue;
       padding-right: 0px;
       // margin-right: 0px;
       // margin-left: 5px;
