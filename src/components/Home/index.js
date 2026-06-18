@@ -96,49 +96,60 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="text-zone">
-                <h1>
-                    <span className={letterClass}>H</span>
-                    <span className={`${letterClass} _12`}>e</span>
-                    <span className={`${letterClass} _13`}>l</span>
-                    <span className={`${letterClass} _14`}>l</span>
-                    <span className={`${letterClass} _15`}>o</span>
-                    <span className={`${letterClass} _16`}>!</span>
-                    <br />
-                    <span className={`${letterClass} _17`}>I</span>
-                    <span className={`${letterClass} _18`}>'m</span>
-                    {/* <img
-                    src={LogoPic}
-                    alt="JavaScript Developer Name, Web Developer Name"
-                    /> */}
-                    <span className='name'> 
-                        <AnimatedLetters
-                        letterClass={letterClass}
-                        strArray={nameArray}
-                        idx={15}/>
-                    </span>
-                    
-                    <br />
-                    {/* <AnimatedLetters
-                    letterClass={letterClass}
-                    strArray={jobArray}
-                    idx={22}
-                    /> */}
-                </h1>
+                    <div className='intro'>
+                        <div className='hello'>
+                        <h1>
+                            <span className={letterClass}>H</span>
+                            <span className={`${letterClass} _12`}>e</span>
+                            <span className={`${letterClass} _13`}>l</span>
+                            <span className={`${letterClass} _14`}>l</span>
+                            <span className={`${letterClass} _15`}>o</span>
+                            <span className={`${letterClass} _16`}>!</span>
+                        </h1></div>
+                        <div className='im-name'>
+                        <h1>
+                            <span className={`${letterClass} _17`}>I</span>
+                            <span className={`${letterClass} _18`}>'m</span>
+                        
+                            {/* <img
+                            src={LogoPic}
+                            alt="JavaScript Developer Name, Web Developer Name"
+                            /> */}
+                        
+                            <span className='name'> 
+                                <AnimatedLetters
+                                letterClass={letterClass}
+                                strArray={nameArray}
+                                idx={15}/>
+                            </span>
+                        </h1></div>
+                            
+                                
+                            {/* <AnimatedLetters
+                            letterClass={letterClass}
+                            strArray={jobArray}
+                            idx={22}
+                            /> */}
+                        
+                    </div>
                 <h2>Data Analyst / Software Developer / Technical Trainer</h2>
                 <div className='parent-wrapper'>
                     <div className="further-explanation">
-                        <p className="first-text">This website is to demonstrate my aptitude in Data Analytics, Software Development, and Technical Training.</p>
-                        <span className="some-text">
+                        <p>This website is to demonstrate my aptitude in <span className='nav-bar-text'>Data Analytics, </span> <span className='nav-bar-text'>Software Development, </span> and <span className='nav-bar-text'>Technical Training. </span></p>
+                        <p>Please explore this site using the <span className='nav-bar-text'>Nav Bar </span>above and feel free to <span className='nav-bar-text'> Contact Me </span> so we can discuss how I may serve your team best!</p>
+                            
+                            
+                        {/* <span className="some-text">
                             <p>Please explore this site using the </p>
                             <div><p className='nav-bar-text'> Nav Bar </p></div>
                             <p> above and feel free to</p>
                         
-                            <div className='contact-me-text-wrapper'>
+                            <div>
                                 <p className='contact-me-text'>Contact Me</p>
                             </div>
                         
                             <p> so we can discuss how I may serve your team best!</p>
-                        </span>
+                        </span> */}
                     </div>
                     
                     <div className='contact-button'>
@@ -218,7 +229,7 @@ const Home = () => {
             {/* <CircleLoader/> */}
             
             {/* <ReactLoading type="balls"/> */}
-            <Footer/>
+            {/* <Footer/> */}
         </>
     );
 }

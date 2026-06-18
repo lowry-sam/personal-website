@@ -1,12 +1,14 @@
 .home-page {
-  overflow-y: scroll;
+  //overflow-y: scroll;
   overflow-x: hidden;
   //background: green;
-  min-height: 85vh;
+  //min-height: 90vh;
   align-items: center;
+  min-width: 100vw;
   display: flex;
-  padding: 20px 20px;
+  //padding: 20px 20px;
   justify-content: center;
+  
     .text-zone {
       // position: absolute;
       // left: 10%;
@@ -17,27 +19,37 @@
       //padding-right: -50px;
       //width: 40%;
       max-height: 90%;
-      //background-color: red;
+      padding-left: -50px;
+      
+      //background-color: orange;
       display: flex;
       width: 45%;
       height: 100%;
       flex-direction: column;
-      justify-content: baseline;
-      align-content: baseline;
-      text-align: left;
-
+      justify-content: center;
+      align-content: center;
+        text-align: center;
       opacity: 0;
       animation: fadeInUp 2s 1s;
       animation-fill-mode: forwards;
+
+      .intro {
+        //background-color: red;
+        display: flex;
+        //flex-direction: row;
+        justify-content: center;
+
+      }
 
        h1 {
         color: #fff;
         font-size: 56px;
         line-height: 53px;
-        margin: 0;
+        margin: 0px 10px;
         font-family: 'Coolvetica';
         font-weight: 400;
         margin-bottom: 20px;
+        margin-right: 0px;
     
         // &:before {
         //   content: '<h1>';
@@ -62,7 +74,7 @@
         //   opacity: 0.6;
         // }
         .name {
-          margin-left: 10px;
+          margin-left: 20px;
           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
     
@@ -78,51 +90,62 @@
       }
 
       .parent-wrapper {
-        align-items: left;
+        align-items:  center;
+        //flex-direction: row;
         flex-direction: column;
+        //flex-wrap: wrap;
+
         display: flex;
-        justify-content: left;
-        //background-color: red;
+        justify-content: center;
+        //background-color: yellow;
 
         .further-explanation {
           position: relative;
           margin-top: 20px;  
-         //background-color: blue;
-          max-width: 100%;
+          //background-color: blue;
+          width: 75%;
+          margin-left: 10px;
           justify-content: left;
           align-items: left;
           align-content: left;
           text-align: left;
           display: flex;
           flex-direction: column;
+          //flex-wrap: wrap;
           cursor: default;
           
           p {
             color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 14px;
+            font-size: 15px;
           }
 
           .first-text {
             align-items: left;
             text-align: left;
+            display: flex;
+            flex-direction: row;
+            //flex-wrap: wrap;
+            background-color: red;
           }
 
           .some-text {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            //background-color: red;
             // align-items: center;
             // justify-content: center;
             margin-top: 5px;
-            align-items: left;
-            text-align: left;
+            // align-items: right;
+            // text-align: right;
+            // justify-content: right;
           }
         }
 
         .nav-bar-text, .contact-me-text {
           //color: red;
-          margin: 0px 3px;
+          margin: 0px 0px;
           font-weight: bold;
           transition: 0.1s;
           
@@ -187,7 +210,7 @@
           color: rgb(118, 118, 118);
           //margin-top: 20px;
           font-weight: 600;
-          font-size: 13px;
+          font-size: 16px;
           font-family: sans-serif;
           letter-spacing: 3px;
           animation: fadeIn 1s 1.8s backwards;
@@ -611,13 +634,41 @@
   @media screen and (max-width: 1200px) {
     .home-page {
       min-height: 85vh;
+
+      h1 {
+        font-size: 12px;
+      }
+
+      .further-explanation {
+        margin-left: 0px;
+      }
       .text-zone, .picture-zone {
-        width: 60%;
+        width: 50%;
+        margin-right: 50px;
       }
     }
 
     
     
+  }
+
+  @media screen and (max-width: 1100px) {
+    .home-page .intro {
+
+      //background-color: purple;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      // .hello {
+      //   background-color: orange;
+      // }
+
+      // .im-name {
+      //   background-color: green;
+      // }
+ 
+    }
   }
   
   @media screen and (max-width: 1000px) {
@@ -636,15 +687,30 @@
     justify-content: center;
     overflow-x: hidden;
     padding: 0px 0px;
-    margin-top: 100px;
+    margin-top: 50px;
+    overflow: hidden;
+
+    .further-explanation {
+      width: 70%;
+    }
+
+    
     
 
     .pictures-zone {
-      background-color: yellow;
-      width: 100%;
+      //background-color: yellow;
+      width: 95%;
+      height:auto;
+      min-height: 0px;
       // margin-left: 0;
       // margin-right: 0;
-      margin: 20px 20px;
+      margin: 0px 0px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      align-content: baseline;
+
+      margin-bottom: 20px;
       .hover-image {
         //margin: 0px;
         min-width: 100%;
@@ -657,7 +723,7 @@
   
     .home-page .text-zone {
       position: initial;
-      min-width: 100%;
+      min-width:  95%;
       transform: none;
       display: flex;
       justify-content: center;
@@ -667,20 +733,34 @@
       box-sizing: border-box;
       min-height: 40vh;
       overflow-x: hidden;
-      background-color: blue;
-      padding-right: 0px;
+      //background-color: blue;
+      padding-left: 15px;
       // margin-right: 0px;
       // margin-left: 5px;
       margin-top: 0px;
+
+      .intro {
+        //background-color: palegoldenrod;
+        display: flex;
+        flex-direction: row;
+      }
     }
   
   
     .home-page .flat-button {
       float: none;
       display: block;
-      margin: 20px auto 0 auto;
+      //margin: 20px auto 0 auto;
       width: 124px;
 
+    }
+
+    // .home-page .intro {
+    //   background-color: purple;
+    // }
+
+    .home-page .contact-button {
+      //background-color: green;
     }
   
     .logo-container {
@@ -761,6 +841,8 @@
         animation-fill-mode: forwards;
         opacity: 0;
     }
+
+    
 
     // .nav-bar-location-mobile.second-action {
     //   animation: fadeOut 1s ease-in-out;

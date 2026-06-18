@@ -8,13 +8,15 @@ body {
   color: #444;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #022c43;
-  overflow: hidden;
+  background: linear-gradient(to bottom, rgb(0, 0, 189), rgb(18, 18, 35));
+  overflow-y: auto;
   display: block;
+  overflow-x:  hidden;
+  
 }
 
 @media screen and (max-width: 1200px) {
   body {
-    overflow: scroll;
+    /* overflow: scroll; */
   }
 }

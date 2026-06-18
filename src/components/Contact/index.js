@@ -125,7 +125,7 @@ return (
         </div>
        
       </div>
-      <Footer/>
+      {/* <Footer/> */}
       <Loader type='ball-scale-ripple-multiple'/>
     </>
   )

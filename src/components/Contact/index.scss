@@ -1,16 +1,21 @@
 .contact-page {
   //background-color: red;
-  margin-top: 50px;
+  margin-top: 30px;
+  flex: 1;
   display: flex;
   //align-items: center;
   justify-content: space-around;
-  height: auto;
-  overflow-y: scroll;
+  //height: auto;
+  //overflow-y: scroll;
+  overflow-y: hidden;
   margin-bottom: -15px;
   opacity: 0;
   animation: fadeIn 1s 1s;
   animation-fill-mode: forwards;
-  min-height: 85vh;
+  min-height: 75vh;
+  max-height: 75vh;
+  overflow-x: hidden ;
+  min-width: 100vw;
 
   @media screen and (max-width: 1200px) {
     margin-top: 70px;
@@ -59,6 +64,7 @@
   margin-top: 50px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .map-section {
@@ -140,13 +146,12 @@
       color: #fff;
       padding: 20px;
       box-sizing: border-box;
-      overflow: scroll;
+      overflow-y: auto;
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
       resize: none;
-      overflow-x: hidden;
-      overflow-y: auto;
+      
     }
   
     .flat-button {
@@ -230,34 +235,36 @@
 
   @media screen and (max-width: 1250px) {
     .map-wrap {
-      height: 90%;
+      height: 85%;
+      width: 80%;
     }
   }
 
   @media screen and (max-width: 1200px) {
     .contact-page {
-      min-height: 88vh;
+      //min-height: 88vh;
       transition: 0.1s;
+      margin-top: -10px;
     }
     .text-zone {
       margin-left: 5px;
       margin-right: 10px;
     }
-    .map-wrap {
-      //float: none;
-      //width: 100%;
-      //height: 400px;
-      //margin: 0;
-      margin-left: 0px;
-      margin-top: -10px;
-      //background: yellow;
-      height: 90%;
+    // .map-wrap {
+    //   //float: none;
+    //   //width: 100%;
+    //   //height: 400px;
+    //   //margin: 0;
+    //   margin-left: 0px;
+    //   margin-top: -10px;
+    //   //background: yellow;
+    //   height: 90%;
 
-      .leaflet-container {
-        margin-left: 0px;
-        max-width: 97%;
-      }
-    }
+    //   .leaflet-container {
+    //     margin-left: 0px;
+    //     max-width: 97%;
+    //   }
+    // }
 
     
 
@@ -273,22 +280,26 @@
 
   @media screen and (max-width: 1100px) {
     .map-wrap {
-      height: 90%;
+      height: 80%;
     }
   }
 
   @media screen and (max-width: 800px) {
     .contact-page {
+      // display: flex;
+      margin-top: 0px;
+      margin-bottom: 40vh;
       display: flex;
-      height: auto;
-      overflow-y: scroll;
-      overflow-x: hidden;
       flex-direction: column;
-      margin-top: 50px;
+      // height: auto;
+      // overflow-y: hidden;
+      // overflow-x: hidden;
+      // flex-direction: column;
+      // margin-top: 20px;
       //background-color: orange;
       //min-height: 500px;
       
-      .text-zone, .map-wrap, .leaflet-container {
+      .text-zone {
         width: 100%;
         height: 100%;
         margin-top: 20px;
@@ -296,7 +307,13 @@
       }
 
       .text-zone {
-        padding-bottom: 650px;
+        display: flex;
+        justify-content: baseline;
+        align-items: baseline;
+        //padding-bottom: 650px;
+        margin-right: 0px;
+        padding-left: 0px;
+        max-width: 95%;
       }
 
       p {
@@ -304,21 +321,36 @@
       }
 
       .map-section {
-        display: block;
+        display: flex;
+        //position: absolute;
+
+        .map-wrap {
+          position: absolute;
+          max-height: 50vh;
+          width: 90vw;
+          top: 70vh;
+          left: 3vw;
+        }
+
+        .info-map {
+          top: 67%;
+          animation: fadeIn 1s 1.5s;
+          animation-fill-mode: forwards;
+        }
       }
 
-      .map-wrap {
-        position: absolute;
-        top: 60%;
-        height: 75%;
-        width: 100%;
-      }
+      // .map-wrap {
+      //   //position: absolute;
+      //   display: flex;
+      //   min-height: 100vh;
+      //   top: 60%;
+      //   height: 75%;
+      //   width: 100%;
+      // }
 
-      .info-map {
-        top: 67%;
-        animation: fadeIn 1s 1.5s;
-        animation-fill-mode: forwards;
-      }
+      
+
+      
     }
   }
   

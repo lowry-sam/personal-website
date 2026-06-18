@@ -35,9 +35,9 @@ const Layout = () => {
                             <NavBar navigation={realLocation}/>
                             
                             <div className="main-content"> <Outlet/></div>
-                        
+                        <Footer/>
                             
-                            {/* <Footer/> */}
+                            
                         </div>
                     
             

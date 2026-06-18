@@ -17,6 +17,9 @@
     // top: 1001000;
     background-color: black;
     flex-direction: column;
+    position: relative;
+    bottom: 0;
+    min-width: 100%;
     //margin-top: 100px;
    // width: 100%;
     //max-height: 40px;
@@ -25,8 +28,8 @@
      justify-items: center;
     align-items: center;
     // justify-content: center;
-    z-index: 9999999;
-    padding: 0 20px;
+    z-index: 1;
+    padding: 10px 20px;
 
     ul {
         margin: 10px 0;

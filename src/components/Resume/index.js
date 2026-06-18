@@ -269,7 +269,7 @@ const Resume = () => {
                         {renderCerts(skillsData.Certifications)}
                     </div>
                 </div>
-                <Footer/>
+                {/* <Footer/> */}
             </div>
             <Loader type='ball-scale-ripple-multiple'/>
         </>
