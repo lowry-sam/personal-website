@@ -135,8 +135,16 @@ const Home = () => {
                 <h2>Data Analyst / Software Developer / Technical Trainer</h2>
                 <div className='parent-wrapper'>
                     <div className="further-explanation">
-                        <p>This website is to demonstrate my aptitude in <span className='nav-bar-text'>Data Analytics, </span> <span className='nav-bar-text'>Software Development, </span> and <span className='nav-bar-text'>Technical Training. </span></p>
-                        <p>Please explore this site using the <span className='nav-bar-text'>Nav Bar </span>above and feel free to <span className='nav-bar-text'> Contact Me </span> so we can discuss how I may serve your team best!</p>
+                        <p>This website is to demonstrate my aptitude in 
+                            <span className='nav-bar-text'> Data Analytics, </span> 
+                            <span className='nav-bar-text'> Software Development, </span> 
+                            <span className='nav-bar-text'> Technical Training, </span> 
+                        and more!</p>
+                        <p>Please explore this site using the 
+                            <span className='nav-bar-text'> Nav Bar </span>
+                            above and feel free to 
+                            <span className='nav-bar-text'> Contact Me </span> 
+                        so we can discuss how I may serve your team best.</p>
                             
                             
                         {/* <span className="some-text">

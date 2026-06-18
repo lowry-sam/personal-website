@@ -1,3 +1,145 @@
+.about-page-container {
+  margin-top: 5vh;
+  width: 100%;
+  height: 100%;
+  min-height: 70vh;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  .text-zone-about, .pictures-zone-about {
+    background-color: red;
+    //min-width: 50%;
+    width: 50%;
+    height: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    padding: 20px 20px;
+
+    h1 {
+      margin:10px 20px;
+      margin-top:-10px;
+      font-size: 50px;
+      color: white;
+      font-family: sans-serif;
+      text-align: left;
+    }
+
+    p {
+      color: white;
+      font-size: 15px;
+      padding: 5px 20px;
+    }
+
+    .nav-bar-text {
+      //color: red;
+      margin: 0px 0px;
+      font-weight: bold;
+      transition: 0.1s;
+      
+      &:hover {
+        color: yellow;
+        //transform: translateY(-1px) translateX(1px);
+        transition: 0.1s;
+      }
+    }
+  }
+  .pictures-zone-about {
+    background-color: blue;
+    //min-width: 50%;
+    width: 50%;
+    height: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .border {
+      width: 100px;
+      height: 100px;
+      background-color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+       clip-path: polygon(
+        50% 0%, 80% 9%, 100% 35%, 100% 65%, 80% 91%, 
+        50% 100%, 20% 91%, 0% 65%, 0% 35%, 20% 9%
+      );
+      margin: 10px;
+      transition: 0.25s ease-in-out;
+
+      &:hover {
+        background-color: yellow;
+        width: 200px;
+        height: 200px;
+        transition: 0.25s ease-in-out;
+      }
+
+      &:after {
+        content: 'angular';
+        font-size: 9px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        opacity: 1;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+    }
+    .icons {
+      height: 70%;
+      width: 70%;
+      background-color: white;
+      //object-fit: cover;
+       clip-path: polygon(
+        50% 0%, 80% 9%, 100% 35%, 100% 65%, 80% 91%, 
+        50% 100%, 20% 91%, 0% 65%, 0% 35%, 20% 9%
+      );
+      padding: 10px;
+      transition: 0.25s ease-in-out;
+
+      &:after {
+        content: 'angular';
+        font-size: 9px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        opacity: 1;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+      //border: 5px solid black;
+      &:hover {
+        height: 80%;
+        width: 80%;
+        //background-color: yellow;
+        // width: 200px;
+        // height: 200px;
+        transition: 0.25s ease-in-out;
+        
+      }
+    }
+    
+  }
+}
+
+
+
 .stage-cube-cont {
   width: 50%;
   height: 100%;
@@ -74,6 +216,17 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .about-page-container {
+    flex-direction: column;
+    min-height: 0;
+    .text-zone-about, .pictures-zone-about {
+      width: 90%;
+      min-height: 0;
+      padding: 50px 20px;
+      // padding-left: 50px;
+      // padding-right: 50px;
+    }
+  }
   .stage-cube-cont {
     position: initial;
     width: 100%;

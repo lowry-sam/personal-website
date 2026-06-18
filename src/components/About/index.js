@@ -10,16 +10,20 @@ import Footer from "../Footer"
 const About = () => {
     
     const [ letterClass, setLetterClass] = useState('text-animate')
-//     useEffect (() => {
-//     return setTimeout(() => {
-//         setLetterClass('text-animate-hover')
-//     }, 3000)
-//    }, []) 
+    const doSomething = async() =>{
+        return setTimeout(() => {
+            setLetterClass('text-animate-hover')
+        }, 1000)
+    }
+        
+    useEffect(() =>{
+         doSomething();
+    },[])
 
     return (
         <>
-        <div className='container about-page'>
-            <div className="text-zone">
+        <div className='about-page-container'>
+            <div className="text-zone-about">
                 <h1> 
                     <AnimatedLetters 
                         letterClass={letterClass}
@@ -29,13 +33,25 @@ const About = () => {
                 </h1>    
 
                 <p>
-                    something somet hingskljdf
+                    I attended the University of South Carolina from 2019-2024, and received my Bachelor's in 
+                    <span className='nav-bar-text'> Computer Science </span> 
+                    and my Master's in 
+                    <span className='nav-bar-text'> Secondary Education. </span>
                 </p>
                 <p>
-                    something else!
+                    I have extensive experience through work and education experiences in 
+                    <span className='nav-bar-text'> Technical Training, </span> 
+                    <span className='nav-bar-text'> Software Development, </span> 
+                    <span className='nav-bar-text'> IT, </span> 
+                    <span className='nav-bar-text'> AI & ML, </span> 
+                    <span className='nav-bar-text'> Data Analytics, </span>
+                    <span className='nav-bar-text'> Database Design and Management, </span>  and 
+                    <span className='nav-bar-text'> Technical Solutions. </span>
                 </p>
 
-                <div className="stage-cube-cont">
+                
+
+                {/* <div className="stage-cube-cont">
                     <div className="cubespinner">
                         <div className="face1">
                             <FontAwesomeIcon icon={faAngular} color="#DD0031" />
@@ -56,11 +72,19 @@ const About = () => {
                             <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
                         </div>
                     </div>
-                </div>
+                </div> */}
                 
             </div>   
-           
+           <div className="pictures-zone-about">
+                <div className='border'><FontAwesomeIcon icon={faAngular} color="#DD0031" className='icons' data-text='Angular'/></div>
+                <div className='border'><FontAwesomeIcon icon={faHtml5} color="#F06529" className='icons'/></div>
+                <div className='border'><FontAwesomeIcon icon={faCss3} color="#28A4D9"  className='icons'/></div>
+                <div className='border'><FontAwesomeIcon icon={faReact} color="#5ED4F4" className='icons'/></div>
+                <div className='border'><FontAwesomeIcon icon={faJsSquare} color="#EFD81D"  className='icons'/></div>
+                <div className='border'><FontAwesomeIcon icon={faGitAlt} color="#EC4D28"  className='icons'/></div>
+            </div>
         </div>
+        
        <Loader type='ball-scale-ripple-multiple'/>
         </>
     )

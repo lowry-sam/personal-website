@@ -58,8 +58,11 @@ return (
           </h1>
           <div className="explaination-zone">
             <p>
-              I am interested in bettering my skills as a Data Analyst, Software Developer, and Technical Trainer. 
-              I am open to remote and in-person opportunities in the Chicagoland area.
+              I am interested in scaling my skills as a 
+              <span className='nav-bar-text'> Data Analyst, </span> 
+              <span className='nav-bar-text'> Software Developer, </span> and 
+              <span className='nav-bar-text'> Technical Trainer </span> 
+              to your business! I am open to remote, hybrid, and in-person opportunities in the Chicagoland area.
             </p>
             <p className="bold">
               Please reach out to me either by email, phone, or by filling out the form below!
