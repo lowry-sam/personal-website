@@ -11,13 +11,13 @@ import { useState, useEffect } from 'react'
 const Resume = () => {
     const [ selected, setSelected ] = useState("Application Software Development Intern");
         
-        const toggle = (idx) => {
-            if(selected === idx) {
-                return setSelected(null);
-            }
-
-            setSelected(idx);
+    const toggle = (idx) => {
+        if(selected === idx) {
+            return setSelected(null);
         }
+
+        setSelected(idx);
+    }
 
     const [opened, setOpened] = useState(false);
 
@@ -26,6 +26,7 @@ const Resume = () => {
     }
 
     const renderResume = (resume) => {
+        
         return (
             <div className='container'>
                 

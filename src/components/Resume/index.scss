@@ -33,7 +33,7 @@
     
     // transform-style: preserve-3d;
     opacity: 0;
-    animation: fadeInUp 2s 1s;
+    animation: fadeInUp 2s 0.5s;
     animation-fill-mode: forwards;
 
     @media screen and (max-width: 1200px) {
@@ -70,6 +70,7 @@
         padding: 0px 0px;
         margin: 0px 0px;
         margin-left: 2.5vw;
+        margin-bottom: 10px;
         justify-content: space-around;
         align-items: center;
         overflow-x: hidden;

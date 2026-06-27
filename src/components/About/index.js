@@ -9,7 +9,7 @@ import Loader from "react-loaders"
 import './index.scss'
 import Footer from "../Footer"
 import teams from '../../assets/brand-logos/teams.png'
-import adobe from '../../assets/brand-logos/adobe-color.png'
+import adobe from '../../assets/brand-logos/adobe-new.png'
 import slack from '../../assets/brand-logos/slack.png'
 import zoom from '../../assets/brand-logos/zoom.webp'
 import chat from "../../assets/brand-logos/cgpt.webp"
@@ -23,8 +23,12 @@ import matlab from "../../assets/brand-logos/Matlab_Logo.png"
 import r from "../../assets/brand-logos/R_logo.svg.png"
 import powerbi from "../../assets/brand-logos/powerbi.png"
 import sql from "../../assets/brand-logos/sql.png"
-
-
+import linux from "../../assets/brand-logos/linux.png"
+import windows from "../../assets/brand-logos/windows.png"
+import apple from "../../assets/brand-logos/apple-color.png"
+import copilot from "../../assets/brand-logos/github-copilot.png"
+import canvas from "../../assets/brand-logos/canvas.png"
+import magicschool from "../../assets/brand-logos/magicschool.png"
 
 const About = () => {
     
@@ -40,37 +44,40 @@ const About = () => {
     },[])
 
     const icons = [
-        {src: faAngular, text: "Angular", color: "#DD0031", type: "icon"},
-        {src: faCss3, text: "CSS", color: "#28A4D9", type: "icon"},
-        {src: faGitAlt, text: "Git", color: "#EC4D28", type: "icon"},
-        {src: faHtml5, text: "HTML", color: "#F06529", type: "icon"},
-        {src: faJsSquare, text: "JavaScript", color: "#EFD81D", type: "icon"},
-        {src: faReact, text: "React", color: "#5ED4F4", type: "icon"},
         {src: faJava, text: "Java", color: "#FF5733", type: "icon"},
+        {src: faCss3, text: "CSS", color: "#28A4D9", type: "icon"},
+        {src: zoom, text: "Zoom", type:"image"},{src: faGitAlt, text: "Git", color: "#EC4D28", type: "icon"},
+        {src: chat, text: "ChatGPT", type:"image"},
+        {src: csharp, text: "C#", type:"image"},
+        {src: faReact, text: "React", color: "#5ED4F4", type: "icon"},
+        {src: windows, text: "Windows", type: "image"},
         {src: faDocker, text: "Docker", color: "#0db7ed", type: "icon"},
         {src: faClaude, text: "Claude", color: "#C15F3C", type: "icon"},
         {src: faGolang, text: "GoLang", color: "#00ADD8", type: "icon"},
         //{src: faGoogle, text: "Google Workspace", color: "black"},
-        {src: faLinux, text: "Linux", color: "#F4BC00", type: "icon"},
+        {src: canvas, text: "Canvas", type: "image"}, 
+        {src: powerbi, text: "Power BI", type:"image"},
+         {src: linux, text: "Linux", color: "#F4BC00", type: "image"},
         //{src: faMicrosoft, text: "Microsoft Office", color: "#B3191C"},
         //{src: faPython, text: "Python", color: "#4584b6"},
         //{src: faSlack, text: "Slack", color: "#4A154B"},
         //{src: faC, text: "C", color: "black"}
-        {src: teams, text: "Microsoft Teams", type:"image"},
-        {src: zoom, text: "Zoom", type:"image"},
+        {src: c, text: "C", type:"image"},
+        {src: faHtml5, text: "HTML", color: "#F06529", type: "icon"},
         {src: slack, text: "Slack", type:"image"},
         {src: adobe, text: "Adobe Creative Cloud", type:"image"},
-        {src: chat, text: "ChatGPT", type:"image"},
+        {src: copilot, text: "Copilot", type: "image"},
         {src: python, text: "Python", type:"image"},
-        {src: microsoft, text: "Microsoft Office", type:"image"},
+        {src: microsoft, text: "Microsoft Office  ", type:"image"},
         {src: google, text: "Google Workspace", type:"image"},
-        {src: cplusplus, text: "C++", type:"image"},
-        {src: c, text: "C", type:"image"},
-        {src: csharp, text: "C#", type:"image"},
+         {src: teams, text: "Microsoft Teams", type:"image"},
+         {src: cplusplus, text: "C++", type:"image"},
+        {src: faAngular, text: "Angular", color: "#DD0031", type: "icon"},
+        {src: apple, text: "iOS", type: "image"},
         {src: matlab, text: "MatLab", type:"image"},
         {src: r, text: "R", type:"image"},
-        {src: powerbi, text: "Power BI", type:"image"},
-        {src: sql, text: "SQL", type:"image"},
+        {src: magicschool, text: "Magic School AI", type: "image"},
+        {src: faJsSquare, text: "JavaScript", color: "#EFD81D", type: "icon"},{src: sql, text: "SQL", type:"image"},
 
     ];
 
@@ -86,9 +93,9 @@ const About = () => {
                 <div className='level one'>
                     {
                         icons.map((icon, index) => {
-                                return index < 3 ? (
+                                return index < 4 ? (
                                     
-                                        <div className="image-container one" data-text={icon.text}>
+                                        <div className={"image-container " + index} data-text={icon.text}>
                                             { icon.type === "icon" ?
                                                 <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
                                                 : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
@@ -104,9 +111,9 @@ const About = () => {
                 <div className='level two'>
                     {
                         icons.map((icon, index) => {
-                                return index < 7 && index >= 3 ? (
+                                return index < 9 && index >= 4 ? (
                                     
-                                        <div className="image-container one" data-text={icon.text}>
+                                        <div className={"image-container " + index} data-text={icon.text}>
                                             { icon.type === "icon" ?
                                                 <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
                                                 : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
@@ -122,9 +129,9 @@ const About = () => {
                 <div className='level three'>
                     {
                         icons.map((icon, index) => {
-                                return index < 12 && index >= 7 ? (
+                                return index < 15 && index >= 9 ? (
                                     
-                                        <div className="image-container one" data-text={icon.text}>
+                                        <div className={"image-container " + index} data-text={icon.text}>
                                             { icon.type === "icon" ?
                                                 <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
                                                 : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
@@ -137,7 +144,7 @@ const About = () => {
                         } ) 
                     }
                 </div>
-                <div className='level center'>
+                {/* <div className='level center'>
                     {
                         icons.map((icon, index) => {
                                 return index === 12 ? (
@@ -154,13 +161,13 @@ const About = () => {
                             
                         } ) 
                     }
-                </div>
+                </div> */}
                 <div className='level four'>
                     {
                         icons.map((icon, index) => {
-                                return index < 18 && index > 12 ? (
+                                return index < 22 && index >= 15 ? (
                                     
-                                        <div className="image-container one" data-text={icon.text}>
+                                        <div className={"image-container " + index} data-text={icon.text}>
                                             { icon.type === "icon" ?
                                                 <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
                                                 : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
@@ -176,9 +183,9 @@ const About = () => {
                 <div className='level five'>
                     {
                         icons.map((icon, index) => {
-                                return index < 22 && index >= 18 ? (
+                                return index < 27 && index >= 22 ? (
                                     
-                                        <div className="image-container one" data-text={icon.text}>
+                                        <div className={"image-container " + index} data-text={icon.text}>
                                             { icon.type === "icon" ?
                                                 <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
                                                 : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
@@ -194,9 +201,9 @@ const About = () => {
                  <div className='level six'>
                     {
                         icons.map((icon, index) => {
-                                return index < 25 && index >= 22 ? (
+                                return index < 35 && index >= 27 ? (
                                     
-                                        <div className="image-container one" data-text={icon.text}>
+                                        <div className={"image-container " + index} data-text={icon.text}>
                                             { icon.type === "icon" ?
                                                 <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
                                                 : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
@@ -227,6 +234,348 @@ const About = () => {
                         } ) 
                     }
                 </div> */}
+            </div>)
+            
+    }
+
+    const renderIconsTiny = (icons) => {
+
+        return (
+            <div className='render-icons-tiny'>
+                <div className='level one'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 3 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+                <div className='level two'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 7 && index >= 3 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+                <div className='level three'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 12 && index >= 7 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+                {/* <div className='level center'>
+                    {
+                        icons.map((icon, index) => {
+                                return index === 12 ? (
+                                    
+                                        <div className="image-container one" data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div> */}
+                <div className='level four'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 18 && index >= 12 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+                <div className='level five'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 23 && index >= 18 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+                 <div className='level six'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 27 && index >= 23 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+                <div className='level seven'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 35 && index >= 27 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+            </div>)
+            
+    }
+
+    const renderIconsTeenieTiny = (icons) => {
+
+        return (
+            <div className='render-icons-teenie-tiny'>
+                <div className='level one'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 2 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+                <div className='level two'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 5 && index >= 2 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+                <div className='level three'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 9 && index >= 5 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+                {/* <div className='level center'>
+                    {
+                        icons.map((icon, index) => {
+                                return index === 12 ? (
+                                    
+                                        <div className="image-container one" data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div> */}
+                <div className='level four'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 14 && index >= 9 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+                <div className='level five'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 20 && index >= 14 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+                 <div className='level six'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 25 && index >= 20 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+                <div className='level seven'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 29 && index >= 25 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+
+                <div className='level eight'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 33 && index >= 29 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
+
+                <div className='level nine'>
+                    {
+                        icons.map((icon, index) => {
+                                return index < 35 && index >= 33 ? (
+                                    
+                                        <div className={"image-container " + index} data-text={icon.text}>
+                                            { icon.type === "icon" ?
+                                                <div className='border'><FontAwesomeIcon icon={icon.src} color={icon.color} className='icons' alt={`item ${index+1}`} /></div>
+                                                : <div className='border'><img src={icon.src} className='icons' alt={`item ${index+1}`} /></div>
+                                                
+                                            }
+                                        </div>
+                                    
+                            ) : (<div></div>)
+                            
+                        } ) 
+                    }
+                </div>
             </div>)
             
     }
@@ -275,6 +624,7 @@ const About = () => {
                     <span className='nav-bar-text'> Database Design and Management, </span>  and 
                     <span className='nav-bar-text'> Technical Solutions. </span>
                 </p>
+                <p>Here are some of the tools and languages I am knowledgable in! Hover over them for details.</p>
 
                 
 
@@ -304,7 +654,8 @@ const About = () => {
             </div>   
            <div className="pictures-zone-about">
                 {renderIcons(icons)}
-            
+                {renderIconsTiny(icons)}
+                {renderIconsTeenieTiny(icons)}
                 
                 {/* {renderImgs(images)} */}
                 {/* <div class="image-container" data-text="Angular">
