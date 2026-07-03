@@ -19,6 +19,8 @@ const Portfolio = () => {
          doSomething();
     },[])
 
+    const titleArray = "Personal Portfolio".split('')
+
     const renderPortfolio = (portfolio) => {
         return (
             <div className='images-container'>
@@ -45,17 +47,25 @@ const Portfolio = () => {
 
     return (
         <>
-        
-            <div className='container portfolio-page'>
-                <h1 className='page-title'>
-                    <AnimatedLetters 
-                        letterClass={letterClass}
-                        strArray={['P', 'e', 'r', 's', 'o', 'n', 'a', 'l', ' ', 'P', 'o', 'r', 'f', 'o', 'l', 'i', 'o']}
-                        idx={0}
-                    />
-                </h1>
+            <div className='portfolio-page-something'>
+                <div className='header'>
+                    <h1 className='page-title'>
+                        <AnimatedLetters 
+                            letterClass={letterClass}
+                            //strArray={['P', 'e', 'r', 's', 'o', 'n', 'a', 'l', ' ', 'P', 'o', 'r', 'f', 'o', 'l', 'i', 'o']}
+                            strArray={titleArray}
+                            idx={0}
+                        />
+                    </h1>
+                    <p>Below are examples of my work in 
+                        <span className='nav-bar-text'> Software Development </span> and 
+                        <span className='nav-bar-text'> Data Analytics</span>.
+                        Click on each for more details and links to view them!
+                    </p>
+                </div>
+                
                 <div className="render-portfolio">
-                    {renderPortfolio(portfolioData.portfolio)}
+                    {/* {renderPortfolio(portfolioData.portfolio)} */} Hello
                 </div>
             </div>
             {/* <CircleLoader color="blue" /> */}

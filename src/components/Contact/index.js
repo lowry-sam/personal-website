@@ -49,13 +49,15 @@ return (
     <>
       <div className="container contact-page">
         <div className="text-zone">
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
-              idx={15} className="page-title"
-            />
-          </h1>
+          <div className="header">
+            <h1>
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
+                idx={15} className="page-title"
+              />
+            </h1>
+          </div>
           <div className="explaination-zone">
             <p>
               I am interested in scaling my skills as a 

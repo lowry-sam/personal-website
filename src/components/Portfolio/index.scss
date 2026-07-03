@@ -1,20 +1,73 @@
-.portfolio-page {
-    padding-left: 100px;
-    padding-right: 50px;
-    width: calc(100% - 150px);
-    position: initial;
-    height: 100%;
-    overflow-y: scroll;
+.portfolio-page-something {
+    // padding-left: 100px;
+    // padding-right: 50px;
+    // width: calc(100% - 150px);
+    //position: initial;
+    //min-height: 100%;
+    overflow-y: auto;
     scroll-behavior: smooth;
-    display: inline-block;
+    //display: inline-block;
+    // justify-content:flex-end;
+    // align-items:center;
+    display: flex;
+    align-items:flex-start;
+    //justify-content: center;
+    justify-items: center;
+    background-color: green;
+    min-height: 50vh;
+    margin-top: 50px;
+    flex-direction: column;
+    overflow: visible;
+    //min-height: ;
+
+    .header {
+        background-color: blue;
+        min-width: 90vw;
+        display: flex;
+        padding: 10px 10px;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        // min-height: 20%;
+    }
 
     h1.page-title {
-        margin-left: 100px;
-        margin-top: 100px;
+        // margin:10px 0px;
+        // margin-top:-30px;
+        font-size: 50px;
+        color: white;
+        font-family: sans-serif;
+        text-align: left;
+    }
+
+    .nav-bar-text {
+        //color: red;
+        margin: 0px 0px;
+        font-weight: bold;
+        transition: 0.1s;
+        
+        &:hover {
+        color: yellow;
+        //transform: translateY(-1px) translateX(1px);
+        transition: 0.1s;
+        }
+    }
+
+    p {
+        color: white;
+        font-size: 15px;
     }
 
     .render-portfolio {
-        overflow-y: scroll;
+       display: flex;
+       background-color: white;
+       border: #ffd700 10px solid;
+        flex-wrap: wrap;
+        min-height: 30vh;
+        width: 100%;
+        overflow: hidden;
+        margin-left: -10px;
+        padding: 10px 10px;
     }
 
     .images-container {
