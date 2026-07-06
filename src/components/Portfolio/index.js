@@ -5,8 +5,12 @@ import { MoonLoader } from 'react-spinners';
 import AnimatedLetters from '../AnimatedLetters';
 import { useState, useEffect, useRef } from 'react'
 import portfolioData from '../../data/portfolio.json'
+import pic from '../../assets/image-gallery/profile10.jpg'
+import { faClose } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Modal from '../Modal/Modal';
 
-const Portfolio = () => {
+const Portfolio = ({showItem}) => {
     const [ letterClass, setLetterClass ] = useState('text-animate')
 
     const doSomething = async() =>{
@@ -21,23 +25,58 @@ const Portfolio = () => {
 
     const titleArray = "Personal Portfolio".split('')
 
+    const [ showModal, setShowModal ] = useState(showItem)
+
+    const childReceive = (modalData) => {
+        setShowModal(modalData)
+    }
+
+    // const renderModal = (index) => {
+    //     return (
+    //         <div>
+                
+    //         </div>
+    //     )
+        
+    // }
+
+    const [ indexNum, setIndex ] = useState('0') 
+
     const renderPortfolio = (portfolio) => {
         return (
             <div className='images-container'>
                 {
                     portfolio.map((port, idx) => {
                         return (
-                            <div key={idx} className='image-box'>
-                                <img src={port.cover} alt="portfolio" className="portfolio-image"/>
-                                <div className="content">
-                                    <p className="title">{port.title}</p>
-                                    <h4 className="description">{port.description}</h4>
-                                    <button
-                                    className="btn"
-                                    onClick={() => window.open(port.url)}
-                                    >View</button>
-                                </div>
-                            </div>
+
+                            <button 
+                                onClick={() => {setShowModal(!showModal); setIndex(idx)}}
+                                >
+                                <div key= {idx} className={'img-container ' + idx}>
+                                    <img src={port.cover} alt="portfolio" className="portfolio-image"/>
+                                    <div className="content">
+                                        <p className="title">{port.title}</p>
+                                        <h4 className="description">{port.description}</h4>
+                                        {/* <button
+                                            className="btn"
+                                            onClick={() => setShowModal(!showModal)}
+                                            //href="#myimage"
+                                            >View</button> */}
+                                    </div>
+                                    </div>
+                                    
+                                </button>
+                            // <div key={idx} className='image-box'>
+                            //     <img src={port.cover} alt="portfolio" className="portfolio-image"/>
+                            //     <div className="content">
+                            //         <p className="title">{port.title}</p>
+                            //         <h4 className="description">{port.description}</h4>
+                            //         <button
+                            //         className="btn"
+                            //         onClick={() => window.open(port.url)}
+                            //         >View</button>
+                            //     </div>
+                            // </div>
                         )
                     })
                 }
@@ -45,9 +84,19 @@ const Portfolio = () => {
         );
     }
 
+    // const showModal = (index) => {
+    //     return (
+    //         <div>
+    //             <Modal index={2}/>
+    //         </div>
+    //     )
+    // }
+
     return (
         <>
             <div className='portfolio-page-something'>
+                
+                
                 <div className='header'>
                     <h1 className='page-title'>
                         <AnimatedLetters 
@@ -65,8 +114,59 @@ const Portfolio = () => {
                 </div>
                 
                 <div className="render-portfolio">
-                    {/* {renderPortfolio(portfolioData.portfolio)} */} Hello
+                    {renderPortfolio(portfolioData.portfolio)}
+                    <div className='images-container 1'>
+                        <div className="image-box" > 
+                            <img src={pic}  />
+                            <div className="content">
+                                <p className="title">"hey"</p>
+                                <h4 className="description">description</h4>
+                                <button
+                                className="btn"
+                                // onClick={() => setShowItem(true)}
+                                >View</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button onClick={() => setShowModal(!showModal)}>
+                        <div className='img-container 2'>
+                            <img src={pic}/>
+                            <div className="content">
+                                <p className="title">"hey"</p>
+                                <h4 className="description">description</h4>
+                                {/* <button
+                                    className="btn"
+                                    onClick={() => setShowModal(!showModal)}
+                                    //href="#myimage"
+                                    >View</button> */}
+                            </div>
+                            </div>
+                        </button>
+                        
+                    
+                    <div className='img-container 3'>
+                        <img src={pic}/>
+                        
+                    </div>
+                    <div className='img-container 4'>
+                        <img src={pic}/>
+                        
+                    </div>
+                    {/* <div className='img-container'>
+                        <img src={pic}/>
+                        
+                    </div>
+                    <div className='img-container'>
+                        <img src={pic}/>
+                        
+                    </div> */}
+
+
+                    {/* <img src={pic}/> */}
+                    
                 </div>
+                {showModal && <Modal changeModalState={childReceive} index={indexNum}/>}
             </div>
             {/* <CircleLoader color="blue" /> */}
             <Loader type="ball-scale-ripple-multiple"/>
