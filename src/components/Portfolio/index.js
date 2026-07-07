@@ -44,16 +44,17 @@ const Portfolio = ({showItem}) => {
 
     const renderPortfolio = (portfolio) => {
         return (
-            <div className='images-container'>
+            <div className='portfolio-gallery'>
                 {
                     portfolio.map((port, idx) => {
                         return (
-
+                            <div key= {idx} className={'gallery-item ' + idx}>
                             <button 
                                 onClick={() => {setShowModal(!showModal); setIndex(idx)}}
+                                className='image-button'
                                 >
-                                <div key= {idx} className={'img-container ' + idx}>
-                                    <img src={port.cover} alt="portfolio" className="portfolio-image"/>
+                                
+                                    <img src={port.cover} alt={"portfolio-image " + idx} className={"portfolio-image " + idx}/>
                                     <div className="content">
                                         <p className="title">{port.title}</p>
                                         <h4 className="description">{port.description}</h4>
@@ -63,9 +64,9 @@ const Portfolio = ({showItem}) => {
                                             //href="#myimage"
                                             >View</button> */}
                                     </div>
-                                    </div>
                                     
-                                </button>
+                                    
+                                </button></div>
                             // <div key={idx} className='image-box'>
                             //     <img src={port.cover} alt="portfolio" className="portfolio-image"/>
                             //     <div className="content">
@@ -113,9 +114,9 @@ const Portfolio = ({showItem}) => {
                     </p>
                 </div>
                 
-                <div className="render-portfolio">
+                 <div className="render-portfolio">
                     {renderPortfolio(portfolioData.portfolio)}
-                    <div className='images-container 1'>
+                   {/*<div className='images-container 1'>
                         <div className="image-box" > 
                             <img src={pic}  />
                             <div className="content">
@@ -123,7 +124,7 @@ const Portfolio = ({showItem}) => {
                                 <h4 className="description">description</h4>
                                 <button
                                 className="btn"
-                                // onClick={() => setShowItem(true)}
+                                onClick={() => setShowItem(true)}
                                 >View</button>
                             </div>
                         </div>
@@ -139,7 +140,7 @@ const Portfolio = ({showItem}) => {
                                     className="btn"
                                     onClick={() => setShowModal(!showModal)}
                                     //href="#myimage"
-                                    >View</button> */}
+                                    >View</button> 
                             </div>
                             </div>
                         </button>
@@ -153,22 +154,30 @@ const Portfolio = ({showItem}) => {
                         <img src={pic}/>
                         
                     </div>
-                    {/* <div className='img-container'>
+                     <div className='img-container'>
                         <img src={pic}/>
                         
                     </div>
                     <div className='img-container'>
                         <img src={pic}/>
                         
-                    </div> */}
+                    </div> 
 
 
-                    {/* <img src={pic}/> */}
+                    <img src={pic}/> */}
                     
                 </div>
+                {/* <div className='image-gallery'>
+                    <button class="gallery-item"><img src={pic} alt="Gallery 1"/></button>
+                    <button class="gallery-item" aria-label="View Gallery Image 1"><img src={pic} alt="Gallery 1"/><div class="title-overlay">Forest Pathway</div></button>
+                    <button class="gallery-item" aria-label="View Gallery Image 1"><img src={pic} alt="Gallery 1"/></button>
+                    <button class="gallery-item" aria-label="View Gallery Image 1"><img src={pic} alt="Gallery 1"/></button>
+                    <button class="gallery-item" aria-label="View Gallery Image 1"><img src={pic} alt="Gallery 1"/></button>
+                    <button class="gallery-item" aria-label="View Gallery Image 1"><img src={pic} alt="Gallery 1"/></button>
+                </div> */}
                 {showModal && <Modal changeModalState={childReceive} index={indexNum}/>}
             </div>
-            {/* <CircleLoader color="blue" /> */}
+            
             <Loader type="ball-scale-ripple-multiple"/>
         </>
     );
