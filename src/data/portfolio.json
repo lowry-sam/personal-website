@@ -3,8 +3,11 @@
         {
             "cover": "/portfolio/1/b.jpeg",
             "title": "First project",
+            "type": "Software Development",
             "description": "React",
-            "url": "http://google.com"
+            "tags": ["React", "JavaScript", "HTML", "CSS", "Gemini","React", "JavaScript", "HTML", "CSS", "Gemini","React", "JavaScript", "HTML", "CSS", "Gemini","React", "JavaScript", "HTML", "CSS", "Gemini"],
+            "url": "http://google.com",
+            "images": ["/portfolio/1/b.jpeg","/portfolio/1/b.jpeg","/portfolio/1/b.jpeg", "/portfolio/1/peely-fortnite.gif"]
         },
         {
             "cover": "/portfolio/1/b.jpeg",

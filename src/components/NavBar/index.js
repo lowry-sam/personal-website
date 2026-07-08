@@ -7,9 +7,10 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import logo from '../../assets/logo.png'
+
 
 
 
@@ -181,7 +182,7 @@ const NavBar = ({navigation}) => {
     //const [showNav, setShowNav] = useState(false);
     const [showBurger, setBurger] = useState(true);
     const toggleNav = (nav) => {
-        setShowNav(!showNav);
+        if (windowWidth < 900) {setShowNav(!showNav);}
         setBurger(!showBurger);
         toggle(nav);
     }
@@ -195,6 +196,23 @@ const NavBar = ({navigation}) => {
         // }
         setSelectedNav(idx);
     }
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        // 2. Update state whenever the window resizing event fires
+        const handleResize = () => {setWindowWidth(window.innerWidth)
+            if (windowWidth > 900) {
+                setShowNav(false)
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        // if (windowWidth < 900) {
+        //     setShowNav(false)
+        // }
+        // 3. Clean up the event listener on unmount
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     
 

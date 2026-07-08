@@ -23,13 +23,18 @@
 
     .header {
         //background-color: blue;
-        min-width: 70vw;
+        min-width: 60vw;
         display: flex;
         padding: 10px 10px;
         flex-direction: column;
         margin-bottom: 20px;
-
+        margin-left: 20px;
         // min-height: 20%;
+
+        @media screen and (max-width: 900px){
+            max-width: 90vw;
+            transition: max-width 0.5s ease-in-out;
+        }
     }
 
     h1.page-title {

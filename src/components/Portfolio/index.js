@@ -25,7 +25,7 @@ const Portfolio = ({showItem}) => {
 
     const titleArray = "Personal Portfolio".split('')
 
-    const [ showModal, setShowModal ] = useState(showItem)
+    const [ showModal, setShowModal ] = useState(false)
 
     const childReceive = (modalData) => {
         setShowModal(modalData)
@@ -48,16 +48,16 @@ const Portfolio = ({showItem}) => {
                 {
                     portfolio.map((port, idx) => {
                         return (
-                            <div key= {idx} className={'gallery-item ' + idx}>
+                            <div key={idx} className={'gallery-item ' + idx}>
                             <button 
-                                onClick={() => {setShowModal(!showModal); setIndex(idx)}}
+                                onClick={() => {setShowModal(true); setIndex(idx)}}
                                 className='image-button'
                                 >
                                 
                                     <img src={port.cover} alt={"portfolio-image " + idx} className={"portfolio-image " + idx}/>
                                     <div className="content">
                                         <p className="title">{port.title}</p>
-                                        <h4 className="description">{port.description}</h4>
+                                        <h4 className="description">{port.type}</h4>
                                         {/* <button
                                             className="btn"
                                             onClick={() => setShowModal(!showModal)}
