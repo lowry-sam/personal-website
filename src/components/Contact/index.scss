@@ -16,6 +16,7 @@
   max-height: 75vh;
   overflow-x: hidden ;
   min-width: 100vw;
+  overflow: visible;
 
   @media screen and (max-width: 1200px) {
     margin-top: 70px;
@@ -81,7 +82,7 @@
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .map-section {

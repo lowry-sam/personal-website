@@ -58,7 +58,7 @@ const Resume = () => {
                                                 <h4 className='tags'>Tags:  
                                                 <ul className='tag-box'>
                                                     {
-                                                        job.tags.map((tag) => (<li> <span>{tag}</span> </li>)
+                                                        job.tags.map((tag) => (<li> <span><h5>{tag}</h5></span> </li>)
                                                     )}
                                                     </ul>
                                                 </h4>
@@ -158,7 +158,7 @@ const Resume = () => {
                                 </div>   
                                 <ul className={languagesSelected ? 'languages-show' : 'languages-no'}>
                                     {
-                                        language.language.map((item) => (<li> <span>{item}</span></li>)
+                                        language.language.map((item) => (<li> <span><h5>{item}</h5></span></li>)
                                     )}
                                 </ul>     
                                 
@@ -186,7 +186,7 @@ const Resume = () => {
                                 </div>   
                                 <ul className={toolsSelected ? 'languages-show' : 'languages-no'}>
                                     {
-                                        tool.tool.map((item) => (<li> <span>{item}</span></li>)
+                                        tool.tool.map((item) => (<li> <span><h5>{item}</h5></span></li>)
                                     )}
                                 </ul>     
                                 
@@ -213,7 +213,9 @@ const Resume = () => {
                                 </div>   
                                 <ul className={certificationSelected ? 'certs-show' : 'certs-no'}>
                                     {
-                                        cert.certification.map((item) => (<li> <span className="certs-span">{item}</span></li>)
+                                        
+                                        cert.certification.map((item) => (<li> <span className="certs-span"><h5>{item}</h5></span></li>)
+                                        
                                     )}
                                 </ul>     
                                 

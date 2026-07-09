@@ -1,6 +1,6 @@
 import './index.scss'
 import Profile from '../../assets/a.png'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, withRouter } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faClose, faHome, faSuitcase } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
@@ -10,6 +10,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { useState, useRef, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import logo from '../../assets/logo.png'
+import React from 'react'
 
 
 
@@ -181,15 +182,50 @@ const NavBar = ({navigation}) => {
     const [showNav, setShowNav] = useState(false);
     //const [showNav, setShowNav] = useState(false);
     const [showBurger, setBurger] = useState(true);
+    const navOptions = [
+        {name: "Home", left: 1.7, width: 13}, 
+        {name: "About Me", left: 15, width: 18}, 
+        {name: "Resume", left: 29.2, width: 16}, 
+        {name:"Portfolio", left: 42.6, width: 15}, 
+        {name: "Contact Me", left: 57.2, width: 19}];
+
+    const location = useLocation();
+    let result = location.pathname.replace("/", "");
+    let realLocation = result.replace("%20", " ");
+    if ((realLocation === "")) {
+        realLocation = "Home";
+    }
+
+    const [ selectedNav, setSelectedNav] = useState(() => {
+        let initialSelection = navOptions[0];
+        console.log(initialSelection);
+        console.log(realLocation);
+        for (let i = 0; i < navOptions.length; i++) {
+            if (navOptions[i].name === realLocation) {
+                initialSelection = navOptions[i];
+                break;
+            }
+        }
+        console.log(initialSelection);
+        return initialSelection;
+    });
+     const [ leftDist, setLeftDist ] = useState(selectedNav?.left);
+     const [ widthVar, setWidth ] = useState(selectedNav?.width);
+
+    
+    const menuRef=React.createRef();
+    const sliderRef=React.createRef();
+
     const toggleNav = (nav) => {
-        if (windowWidth < 900) {setShowNav(!showNav);}
-        setBurger(!showBurger);
-        toggle(nav);
+        if (windowWidth < 900) {setShowNav(!showNav);setBurger(!showBurger);}
+        toggle(nav.name);
+        setLeftDist(nav.left);
+        setWidth(nav.width);
+        // console.log("left1:" + {leftDist});
+        // console.log({leftDist});
     }
     
-    const navOptions = ["Home", "About Me", "Resume", "Portfolio", "Contact Me"];
     
-    const [selectedNav, setSelectedNav] = useState(navigation);
     const toggle = (idx) => {
         // if(selectedNav === idx) {
         //     return setSelectedNav(null);
@@ -219,17 +255,25 @@ const NavBar = ({navigation}) => {
     const displayNavOptions = (navOptions) => {
         return (
             <ul className="nav-list">
+                <div className='selected-nav-slider-new' left-dist={leftDist} style={{  left: `${leftDist}vw`, width: `${widthVar}%` }}> </div>
                 {
                     navOptions.map((nav) => (
                         
-                        <div className={navigation === nav ? 'selected-nav' : 'not-selected'}>
-                            <li className={navigation === nav ? 'selected-nav-item' : ''}>
-                                <Link disabled={navigation === nav} className={navigation === nav ? 'selected-nav-link' : 'nav-link'} to = {nav} onClick={navigation === nav ? '' : () => toggleNav(nav) }>
-                                    {nav}
+                        <div className={navigation === nav.name ? 'selected-nav' : 'not-selected'}>
+                            <li className='selected-nav-item'>
+                                <Link disabled={navigation === nav.name} 
+                                    className={navigation === nav.name ? 'selected-nav-link' : 'nav-link'} 
+                                    to = {nav.name} 
+                                    onClick={navigation === nav.name ? () => { } : 
+                                    () => {toggleNav(nav.name); setLeftDist(nav.left); setWidth(nav.width); 
+                                        // console.log("left object" );console.log(nav.left);console.log(nav.name);
+                                        // console.log("leftDist" );setLeftDist(nav.left); console.log(leftDist); 
+                                         } }>
+                                        {nav.name}
                                 </Link>
                                 
                             </li>
-                            <div className={navigation === nav ? 'selected-nav-slider' : 'no-slider'}></div>
+                            {/* <div className={navigation === nav.name ? 'selected-nav-slider' : 'no-slider'} left-dist={nav.left}></div> */}
                         </div>
                     ))
                 }
@@ -237,14 +281,41 @@ const NavBar = ({navigation}) => {
         );
     }
 
+//     const componentDidMount = () => {
+//         this.moveSlider();
+//     }
+
+//     const componentDidUpdate = (prevProps, prevState, snapshot) => {
+//         this.moveSlider();
+//     }
+
+//     const moveSlider = () => {
+//         const activeMenuEntry = this.menuRef.current.querySelector(navigation);
+//         console.log("hahsdfa")
+//         console.log(navigation)
+//         if (!activeMenuEntry) {return;}
+
+//         const menuRec = this.menuRef.current.getBoundingClientRect();
+//         const activeMenuEntryRec = activeMenuEntry.getBoundingClientRect();
+//         const distance = activeMenuEntryRec.left - menuRec.left;
+//         const width = activeMenuEntryRec.width;
+
+//         requestAnimationFrame(() => {
+//             this.sliderRef.current.setAttribute(
+//                 "style",
+//                 `display: block; transform: translate3d(${distance}px, 0, 0); width: ${width}px`
+//             )
+//         })
+
+//   }
+
   return (
     
     <div className="nav-bar">
         <div className="logo-box">
             <Link 
                 to="/"
-                onClick={() => setShowNav(false)}
-                onClick={() => toggleNav("Home")}>
+                onClick={() => {setShowNav(false); toggleNav("Home"); setLeftDist(navOptions[0].left); setWidth(navOptions[0].width);}}>
                 <img 
                     alt="website logo"
                     src={logo}
@@ -276,8 +347,9 @@ const NavBar = ({navigation}) => {
            className='hamburger-icon'/>
 
          <nav className={showNav ? 'mobile-show' : ''}>
+            
             {displayNavOptions(navOptions)}
-
+            
             {/* <ul>
                 <div className={selectedNav === "Home" ? 'selected-nav' : ''}>
                     <li>
@@ -466,4 +538,4 @@ const NavBar = ({navigation}) => {
 
 
 
-export default NavBar
+export default NavBar;

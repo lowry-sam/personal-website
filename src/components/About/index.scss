@@ -30,6 +30,7 @@
     animation-fill-mode: forwards;
     margin-left: 4vw;
     margin-bottom: 30px;
+    z-index: 1000;
     h1 {
       margin:10px 20px;
       margin-top:-10px;
@@ -60,7 +61,7 @@
   }
   .pictures-zone-about {
     background-color: rgb(255, 255, 255, 0.9);
-    position: absolute;
+    position: inherit;
     left: 47vw;
     //min-width: 50%;
     width: 50%;
@@ -387,7 +388,7 @@
     /* 3. Reveal Text on Hover */
     .image-container:hover::after {
       opacity: 1;  
-      
+      animation-duration: 10s;
       transition: opacity 0.3s ease-in-out;   
 
       // animation-name: jitter;
@@ -602,10 +603,12 @@
 @media screen and (max-width: 1450px) {
   .about-page-container {
     flex-direction: column;
-    min-height: 130vh;
+    min-height: 120vh;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 5vh;
+    //background-color: yellow;
     .text-zone-about {
+      //background-color: red;
       width: 80%;
       min-height: 0;
       padding: 50px 20px;
@@ -629,12 +632,22 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .about-page-container {
+  .pictures-zone-about {
+    //background-color: green;
+    top: 50vh;
+  }
+  }
+} 
+
 @media screen and (max-width: 900px) {
   .about-page-container {
-    min-height: 115vh;
-    margin-top: 25px;
+    min-height: 110vh;
+    margin-top: 30px;
+    //background: blue;
     .pictures-zone-about {
-      top: 45vh;
+      top: 50vh;
       transition: 0.3 ease-in-out;
       height: 70%;
       // min-width: 90vw;
@@ -701,8 +714,9 @@
 @media screen and (max-width: 800px) {
   .about-page-container {
     min-height: 120vh;
+    //background: green;
       .pictures-zone-about {
-        top: 46vh;
+        top: 50vh;
         transition: 0.3 ease-in-out;
         height: 75%;
 
@@ -875,6 +889,7 @@
           &:hover {
           width: 100px;
           height: 100px;
+          animation-duration: 10s;
         }
 
         }
@@ -925,11 +940,21 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .about-page-container {
     min-height: 125vh;
     .pictures-zone-about {
-      top: 48vh;
+    top: 55vh;
+  }
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .about-page-container {
+    min-height: 115vh;
+    .pictures-zone-about {
+      //top: 48vh;
       transition: 0.3 ease-in-out;
       height: 67%;
       //width: 50%;
@@ -1148,7 +1173,7 @@
             opacity: 1;  
             //padding: 100px;
             transition: opacity 0.3s ease-in-out;   
-
+            animation-duration: 10s;
             // animation-name: jitter;
             // animation-timing-function: ease-in-out;
             // animation-iteration-count: infinite;
@@ -1232,9 +1257,9 @@
 
 @media screen and (max-width: 550px) {
   .about-page-container {
-    min-height: 115vh;
+    min-height: 110vh;
     .pictures-zone-about {
-      top: 50vh;
+      top: 60vh;
       height: 60%;
       width: 90%;
       left: 3vw;
@@ -1262,6 +1287,7 @@
         .image-container::after{
           font-size: 10px;
           -webkit-text-stroke: 0;
+          
         }
       }
       

@@ -31,13 +31,9 @@ const Layout = () => {
             {/* {
                     showSpinner ? (<Spinner/> ):( */}
                         <div>
-                    
-                            <NavBar navigation={realLocation}/>
-                            
+                            <NavBar navigation={realLocation, 57.2, 19}/>
                             <div className="main-content"> <Outlet/></div>
-                        <Footer/>
-                            
-                            
+                            <Footer/>
                         </div>
                     
             

@@ -5,7 +5,7 @@
   min-height: 95vh;
   margin-top: 5vh;
   //background-color: green;
-  background: linear-gradient(to bottom, rgb(0, 0, 189), rgb(18, 18, 35));
+  //background: linear-gradient(to bottom, rgb(0, 0, 189), rgb(18, 18, 35));
   //flex-shrink: 0;
   overflow-y: auto;
   overflow-x: hidden;
@@ -25,13 +25,15 @@
   //background: red;
   overflow-y: auto;
   overflow-x: hidden;
+  overflow: visible;
 }
 
  @media screen and (max-width: 1200px) {
   .main-content {
     flex: 1;
-    margin-top: 0px;
-    background: linear-gradient(to bottom, rgb(0, 0, 187), rgb(18, 18, 35))
+    //margin-top: 50px;
+    background: linear-gradient(to bottom, rgb(0, 0, 187), rgb(18, 18, 35));
+    overflow: visible;
     //margin-bottom: 10px;
   }
  }

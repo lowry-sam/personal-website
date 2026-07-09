@@ -24,6 +24,7 @@ import NavBar from '../NavBar'
 import bracket from '../../assets/bracket-inverted-bordered-new.png'
 import arrow from '../../assets/arrow-inverted.png'
 
+
 const Home = () => {
     const [ letterClass, setLetterClass ] = useState('text-animate')
     const nameArray = "Sam Lowry".split('')
@@ -161,7 +162,7 @@ const Home = () => {
                     </div>
                     
                     <div className='contact-button'>
-                        <Link to="/Contact%20Me" className="flat-button" >
+                        <Link to="/Contact%20Me" className="flat-button">
                             CONTACT ME
                         </Link>
                     </div>
