@@ -431,10 +431,21 @@
                 transition: 0.25s ease-in-out;
                 //font-weight: 400;
               }
+
+            
+          }
+
+          .not-selected.false {
+            transform: translateY(0px) translateX(0px);
+            transition: 0.25s ease-in-out;
+            &:hover {
+              color: white;
+              transform: translateY(0px);
+            }
           }
           
           .selected-nav {
-            //background-color: orange;
+            background-color: orange;
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -522,7 +533,7 @@
               font-weight: 400;
               cursor: pointer;
 
-              
+              //background-color: red;
 
               &:hover {
                 color: yellow;
@@ -542,7 +553,7 @@
               text-decoration: none;
               //padding: 0.5rem 5rem;
               
-              
+              //background-color: blue;
               font-weight: 400;
 
               
@@ -1069,7 +1080,7 @@
       height: 100%;
       //background: red;
       margin: 0;
-      z-index: 999999;
+      z-index: 9;
       position: fixed;
       display: flex;
       transform: translateX(110%);
@@ -1078,7 +1089,7 @@
       // flex-direction: column;
       
          transition: 0.5s ease-in-out;
-        z-index: 6;
+        z-index: 999;
         //background-color: purple;
 
       &.mobile-show {

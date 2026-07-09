@@ -22,7 +22,9 @@ const Layout = () => {
     let realLocation = result.replace("%20", " ");
     if ((realLocation === "")) {
         realLocation = "Home";
-    }
+    } 
+    console.log('Omgogmgogg');
+    console.log(realLocation);
 
     return (
         <>
@@ -31,7 +33,7 @@ const Layout = () => {
             {/* {
                     showSpinner ? (<Spinner/> ):( */}
                         <div>
-                            <NavBar navigation={realLocation, 57.2, 19}/>
+                            <NavBar navigation={realLocation}/>
                             <div className="main-content"> <Outlet/></div>
                             <Footer/>
                         </div>

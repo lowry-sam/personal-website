@@ -30,7 +30,7 @@
     animation-fill-mode: forwards;
     margin-left: 4vw;
     margin-bottom: 30px;
-    z-index: 1000;
+    //z-index: 1000;
     h1 {
       margin:10px 20px;
       margin-top:-10px;
@@ -61,24 +61,27 @@
   }
   .pictures-zone-about {
     background-color: rgb(255, 255, 255, 0.9);
-    position: inherit;
-    left: 47vw;
+    position: relative;
+    //left: 47vw;
     //min-width: 50%;
     width: 50%;
     max-width: 40vw;
     min-width: 50vw;
     //height: 90%;
-    height: 80%;
-    min-height: 50vh;
+    height: 90%;
+    min-height: 80vh;
+    max-height: 110vh;
     display: flex;
     flex-direction: column;
     // flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     // position: relative;
     opacity: 0;
     border-radius: 25px;
     border: yellow 10px solid;
+    margin-bottom: 10px;
 
     animation: backInRight 2s 1s;
     animation-fill-mode: forwards;
@@ -603,25 +606,26 @@
 @media screen and (max-width: 1450px) {
   .about-page-container {
     flex-direction: column;
-    min-height: 120vh;
+    //min-height: 120vh;
     align-items: center;
     margin-top: 5vh;
     //background-color: yellow;
     .text-zone-about {
       //background-color: red;
       width: 80%;
-      min-height: 0;
-      padding: 50px 20px;
+      //min-height: 0;
+      padding: 40px 20px;
       margin-left: 0px;
       max-width: 100vw;
+      margin-bottom: 0px;
       // padding-left: 50px;
       // padding-right: 50px;
     }
     .pictures-zone-about {
       width: 80%;
       max-width: 100vw;
-      left: 10vw;
-      top: 45vh;
+      //left: 10vw;
+      top: 0vh;
     }
   }
   .stage-cube-cont {
@@ -636,7 +640,7 @@
   .about-page-container {
   .pictures-zone-about {
     //background-color: green;
-    top: 50vh;
+    top: 0vh;
   }
   }
 } 
@@ -647,9 +651,10 @@
     margin-top: 30px;
     //background: blue;
     .pictures-zone-about {
-      top: 50vh;
+      top: 0vh;
       transition: 0.3 ease-in-out;
-      height: 70%;
+      height: 60%;
+      min-height: 70vh;
       // min-width: 90vw;
       // left: 2.5vw;
 
@@ -713,13 +718,13 @@
 
 @media screen and (max-width: 800px) {
   .about-page-container {
-    min-height: 120vh;
+    //min-height: 110vh;
     //background: green;
       .pictures-zone-about {
-        top: 50vh;
+        top: 00vh;
         transition: 0.3 ease-in-out;
-        height: 75%;
-
+        height: 70%;
+        //background-color: red;
         .render-icons {
           display: none;
         }
@@ -942,9 +947,9 @@
 
 @media screen and (max-width: 700px) {
   .about-page-container {
-    min-height: 125vh;
+    //min-height: 125vh;
     .pictures-zone-about {
-    top: 55vh;
+    top: 0vh;
   }
   }
   
@@ -952,9 +957,9 @@
 
 @media screen and (max-width: 600px) {
   .about-page-container {
-    min-height: 115vh;
+    //min-height: 115vh;
     .pictures-zone-about {
-      //top: 48vh;
+      top: 0vh;
       transition: 0.3 ease-in-out;
       height: 67%;
       //width: 50%;
@@ -1257,12 +1262,13 @@
 
 @media screen and (max-width: 550px) {
   .about-page-container {
-    min-height: 110vh;
+    //min-height: 110vh;
     .pictures-zone-about {
-      top: 60vh;
+      top: 0vh;
       height: 60%;
       width: 90%;
       left: 3vw;
+      min-height: 60vh;
       .render-icons-teenie-tiny {
         .border {
           width: 60px;

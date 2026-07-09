@@ -40,22 +40,22 @@ const Home = () => {
          doSomething();
     },[])
 
-    const box = document.querySelector('.nav-bar-location');
-    let hoverCount = 0;
+    // const box = document.querySelector('.nav-bar-location');
+    // let hoverCount = 0;
 
-    box?.addEventListener('mouseenter', () => {
-        hoverCount++;
+    // box?.addEventListener('mouseenter', () => {
+    //     hoverCount++;
 
-        if (hoverCount === 1) {
-            box.classList.add('first-action');
-            //box.textContent = "Hover me one more time...";
-        } 
+    //     if (hoverCount === 1) {
+    //         box.classList.add('first-action');
+    //         //box.textContent = "Hover me one more time...";
+    //     } 
         
-        else if (hoverCount > 2) {
-            //box.classList.remove('first-action');
-            box.classList.add('second-action');
-        }
-    });
+    //     else if (hoverCount > 2) {
+    //         //box.classList.remove('first-action');
+    //         box.classList.add('second-action');
+    //     }
+    // });
 
     const box2 = document.querySelector('.nav-bar-location-mobile');
     let hoverCount2 = 0;
@@ -78,7 +78,7 @@ const Home = () => {
         <>
         <Loader type="line-scale" active/>
             <div className="container home-page">
-                <div className='nav-bar-location'>
+                {/* <div className='nav-bar-location'>
                     <div className='bracket'>
                         <img src={bracket}/>
                     </div>
@@ -86,7 +86,7 @@ const Home = () => {
                         <h3>Nav Bar!</h3>
                         
                     </div>
-                </div>
+                </div> */}
                 <div className='nav-bar-location-mobile'>
                     <div className='nav-bar-descriptor-mobile'>
                         <h3>Navigate!</h3>

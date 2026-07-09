@@ -189,29 +189,65 @@ const NavBar = ({navigation}) => {
         {name:"Portfolio", left: 42.6, width: 15}, 
         {name: "Contact Me", left: 57.2, width: 19}];
 
+    
+     
     const location = useLocation();
     let result = location.pathname.replace("/", "");
-    let realLocation = result.replace("%20", " ");
+    let result2 = result.replace("/", "");
+    let realLocation = result2.replace("%20", " ");
     if ((realLocation === "")) {
         realLocation = "Home";
-    }
+    } 
+
+    console.log("nav: ");
+    console.log(realLocation);
+
+    let initialSelection = navOptions[0];
 
     const [ selectedNav, setSelectedNav] = useState(() => {
-        let initialSelection = navOptions[0];
+        //console.log("hi!");
+        
         console.log(initialSelection);
-        console.log(realLocation);
-        for (let i = 0; i < navOptions.length; i++) {
-            if (navOptions[i].name === realLocation) {
-                initialSelection = navOptions[i];
-                break;
+        //console.log(realLocation);
+            for (let i = 0; i < navOptions.length; i++) {
+                if (navOptions[i].name === realLocation) {
+                    initialSelection = navOptions[i];
+                    break;
+                }
             }
-        }
-        console.log(initialSelection);
-        return initialSelection;
+            console.log("new initial:")
+            console.log(initialSelection);
+            return initialSelection;
     });
-     const [ leftDist, setLeftDist ] = useState(selectedNav?.left);
-     const [ widthVar, setWidth ] = useState(selectedNav?.width);
 
+     
+
+    //   const assignContactMe = () => {
+    //     setLeftDist(2);
+    //     console.log(leftDist);
+    //  }
+     if (realLocation === "Contact Me") {
+        console.log("hit!");
+        //assignContactMe();
+     }
+
+     const [ leftDist, setLeftDist ] = useState(initialSelection.left);
+    const [ widthVar, setWidth ] = useState(initialSelection.width);
+    
+   
+    // } else if ((realLocation === "Contact Me")) {
+    //     setLeftDist(navOptions[4].left);
+    //     setWidth(navOptions[4].width);
+    //     console.log(leftDist);
+    //     console.log(widthVar);
+    //  }
+    console.log(realLocation);
+
+    
+     //setLeftDist(1);
+
+     
+     
     
     const menuRef=React.createRef();
     const sliderRef=React.createRef();
@@ -243,12 +279,18 @@ const NavBar = ({navigation}) => {
             }
         };
         window.addEventListener('resize', handleResize);
+
+        if ((realLocation === "Contact Me")) {
+            //console.log("booger!");
+            setLeftDist(navOptions[4].left);
+            setWidth(navOptions[4].width);
+        }
         // if (windowWidth < 900) {
         //     setShowNav(false)
         // }
         // 3. Clean up the event listener on unmount
         return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    }, [realLocation]);
 
     
 
@@ -259,7 +301,7 @@ const NavBar = ({navigation}) => {
                 {
                     navOptions.map((nav) => (
                         
-                        <div className={navigation === nav.name ? 'selected-nav' : 'not-selected'}>
+                        <div className={navigation === nav.name ? 'not-selected false' : 'not-selected'}>
                             <li className='selected-nav-item'>
                                 <Link disabled={navigation === nav.name} 
                                     className={navigation === nav.name ? 'selected-nav-link' : 'nav-link'} 
