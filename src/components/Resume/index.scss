@@ -9,7 +9,7 @@
     // width: auto;
     // display: block;
    
-    margin-top: 5vh;
+    margin-top: 15vh;
     height: auto;
     min-height: 60vh;
     //flex-shrink: 0;
@@ -41,9 +41,9 @@
         //margin-top: 70px;
     }
 
-    h1 {
+    .secondary-title {
         margin: 20px 40px;
-        font-size: 50px;
+        //font-size: 50px;
         color: white;
         font-family: sans-serif;
         margin-bottom: -5px;
@@ -782,7 +782,7 @@
 
 @media screen and (max-width: 1200px) {
     .resume {
-        //margin-top: 100px;
+        margin-top: 100px;
     }
 }
 
@@ -790,7 +790,7 @@
     .resume {
         height: auto;
         //background: red;
-        margin-top: 30px;
+        margin-top: 100px;
         .box {
             min-height: 70vh;
             //background-color: red;

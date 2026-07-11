@@ -29,6 +29,7 @@ const Home = () => {
     const [ letterClass, setLetterClass ] = useState('text-animate')
     const nameArray = "Sam Lowry".split('')
     const jobArray = "Data Analyst".split('')
+    const introArray = "Hello! I'm Sam Lowry".split('')
 
     const doSomething = async() =>{
         return setTimeout(() => {
@@ -99,30 +100,36 @@ const Home = () => {
                 <div className="text-zone">
                     <div className='intro'>
                         <div className='hello'>
-                        <h1>
-                            <span className={letterClass}>H</span>
+                        
+                            <span>
+                                <AnimatedLetters
+                                letterClass={letterClass}
+                                strArray={introArray}
+                                idx={1}/>
+                            </span>
+                            {/* <span className={letterClass}>H</span>
                             <span className={`${letterClass} _12`}>e</span>
                             <span className={`${letterClass} _13`}>l</span>
                             <span className={`${letterClass} _14`}>l</span>
                             <span className={`${letterClass} _15`}>o</span>
-                            <span className={`${letterClass} _16`}>!</span>
-                        </h1></div>
+                            <span className={`${letterClass} _16`}>!</span> */}
+                        </div>
                         <div className='im-name'>
                         <h1>
-                            <span className={`${letterClass} _17`}>I</span>
-                            <span className={`${letterClass} _18`}>'m</span>
+                            {/* <span className={`${letterClass} _17`}>I</span>
+                            <span className={`${letterClass} _18`}>'m</span> */}
                         
                             {/* <img
                             src={LogoPic}
                             alt="JavaScript Developer Name, Web Developer Name"
                             /> */}
                         
-                            <span className='name'> 
+                            {/* <span className='name'> 
                                 <AnimatedLetters
                                 letterClass={letterClass}
                                 strArray={nameArray}
                                 idx={15}/>
-                            </span>
+                            </span> */}
                         </h1></div>
                             
                                 

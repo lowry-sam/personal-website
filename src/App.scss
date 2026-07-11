@@ -27,6 +27,13 @@ $primary-color: white;
 //   font-style: normal;
 // }
 
+@font-face {
+  font-family: 'Keph';
+  src: url('./assets/fonts/Kaph/Kaph-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 input,
 textarea {
   font-family: 'Helvetica Neue', sans-serif;

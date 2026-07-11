@@ -1,26 +1,105 @@
 .text-animate {
   display: inline-block;
   opacity: 0;
-  animation: bounceIn;
-  animation-duration: 1s;
-  animation-delay: 1s;
+  animation: wave;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
   min-width: 10px;
 }
+
+.text-wave span {
+  animation: wave;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  animation-delay: calc(var(--i) * 0.1s + 2s) ;
+  
+}
+
+.text-wave h1 {
+  animation: color;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  animation-delay: calc(var(--i) * 0.1s + 2s) ;
+
+  color: transparent;
+  // color: blue;
+  font-size: 40px;
+  line-height: 10px;
+  margin: 0px 0px;
+  font-family: 'Keph';
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-right: 0px;
+  transition: 0.1s;
+  //background-color: red;
+  overflow: visible;
+  margin-bottom: 30px;
+  z-index: 2;
+  &:hover {
+    transform: scale(1.5);
+    transition: 0.1s;
+    -webkit-text-fill-color: #ffd700;
+  }
+}
+
+
 
 .text-animate-hover {
   min-width: 10px;
   display: inline-block;
   animation-fill-mode: both;
+  
+}
 
-  &:hover {
-    animation: rubberBand 1s;
+
+
+@keyframes wave {
+  from,
+  to {
+    transform: scale(1);
+    color: white;
+  }
+  3% {
+    transform: scale(1.3);
     color: #ffd700;
+  }
+  6% {
+    transform: scale(1);
+     color: white;
+  }
+  100% {
+    transform: scale(1);
+    color: white;
+  }
+}
+
+@keyframes color {
+  from,
+  to {
+    //transform: scale(1);
+    color: white;
+    font-size: 40px;
+  }
+  3% {
+    //transform: scale(1.3);
+    color: #ffd700;
+  }
+  6% {
+    //transform: scale(1);
+     color: white;
+  }
+  100% {
+   // transform: scale(1);
+    color: white;
   }
 }
 
 @for $i from 1 through 35 {
   .text-animate._#{$i} {
-    animation-delay: #{$i / 10}s;
+    animation: wave;
   }
 }

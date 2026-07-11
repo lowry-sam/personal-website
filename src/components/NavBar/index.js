@@ -254,6 +254,10 @@ const NavBar = ({navigation}) => {
 
     const toggleNav = (nav) => {
         if (windowWidth < 900) {setShowNav(!showNav);setBurger(!showBurger);}
+        if (nav === "Logo") {
+            let nav = "Home";
+            setShowNav(false);
+        }
         toggle(nav.name);
         setLeftDist(nav.left);
         setWidth(nav.width);
@@ -357,7 +361,7 @@ const NavBar = ({navigation}) => {
         <div className="logo-box">
             <Link 
                 to="/"
-                onClick={() => {setShowNav(false); toggleNav("Home"); setLeftDist(navOptions[0].left); setWidth(navOptions[0].width);}}>
+                onClick={() => {toggleNav("Logo"); setLeftDist(navOptions[0].left); setWidth(navOptions[0].width);}}>
                 <img 
                     alt="website logo"
                     src={logo}

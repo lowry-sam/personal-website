@@ -7,6 +7,7 @@ import educationData from '../../data/education.json'
 import skillsData from '../../data/skills.json'
 import Spinner from '../Spinner';
 import { useState, useEffect } from 'react'
+import AnimatedLetters from '../AnimatedLetters';
 
 const Resume = () => {
     const [ selected, setSelected ] = useState("Application Software Development Intern");
@@ -18,6 +19,18 @@ const Resume = () => {
 
         setSelected(idx);
     }
+
+    const [ letterClass, setLetterClass ] = useState('text-animate')
+    const titleArray = "Resume - Education, Work Experience, & Skills".split('')
+    const doSomething = async() =>{
+        return setTimeout(() => {
+            setLetterClass('text-animate-hover')
+        }, 1000)
+    }
+            
+    useEffect(() =>{
+            doSomething();
+    },[])
 
     const [opened, setOpened] = useState(false);
 
@@ -229,7 +242,13 @@ const Resume = () => {
     return (
         <>
             <div className='resume'>
-                <h1>Education, Work Experiences, and Skills</h1>
+                {/* <h1>Education, Work Experiences, and Skills</h1> */}
+                <div style={{ marginLeft: 40, marginBottom: -10, marginRight: 5 }}><span>
+                    <AnimatedLetters
+                    letterClass={letterClass}
+                    strArray={titleArray}
+                    idx={1}/>
+                </span></div>
                 <div className="title-description">
                     <p>Below you will find my relevant education, work experiences, and skills and abilities.</p>
                     <p>Use the dropdown menus to explore!</p>

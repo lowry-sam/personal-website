@@ -1,5 +1,5 @@
 html {
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 
 body {
@@ -17,6 +17,7 @@ body {
 
 @media screen and (max-width: 1200px) {
   body {
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }

@@ -38,6 +38,9 @@ const About = () => {
             setLetterClass('text-animate-hover')
         }, 1000)
     }
+
+    //const [ letterClass, setLetterClass ] = useState('text-animate')
+    const titleArray = "About Me!".split('')
         
     useEffect(() =>{
          doSomething();
@@ -599,15 +602,15 @@ const About = () => {
     return (
         <>
         <div className='about-page-container'>
-            <div className="text-zone-about">
-                <h1> 
-                    <AnimatedLetters 
+            <div className="text-zone-about">  
+                <div style={{ marginLeft: 20 }}>
+                    <span>
+                        <AnimatedLetters
                         letterClass={letterClass}
-                        strArray={['A', 'b', 'o', 'u', 't', ' ', 'M', 'e', '!']}
-                        idx={15}
-                    />    
-                </h1>    
-
+                        strArray={titleArray}
+                        idx={10}/>
+                    </span>
+                </div>
                 <p>
                     I attended the University of South Carolina from 2019-2024, and received my Bachelor's in 
                     <span className='nav-bar-text'> Computer Science </span> 

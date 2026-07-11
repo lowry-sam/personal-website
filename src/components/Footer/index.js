@@ -33,7 +33,7 @@ const Footer = () => {
                             className="anchor-icon"
                             />
                         </a>  
-                        <a
+                        {/* <a
                             href="/Contact%20Me"
                             
                         > | 843-801-5911
@@ -42,7 +42,7 @@ const Footer = () => {
                             color="red"
                             className="anchor-icon"
                             />
-                        </a> 
+                        </a>  */}
                     </li>
 
                     <li className='footer-icon'>

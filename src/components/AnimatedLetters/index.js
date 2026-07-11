@@ -2,10 +2,10 @@ import './index.scss'
 
 const AnimatedLetters = ({ letterClass, strArray, idx }) => {
   return (
-    <span>
+    <span className='text-wave'>
       {strArray.map((char, i) => (
-        <span key={char + i} className={`${letterClass} _${i + idx}`}>
-          {char}
+        <span id='text-animate' key={char + i} style={{ '--i': i }} className={`${letterClass} _${i + idx}`}>
+          <h1>{char === " " ? "\u00A0" : char}</h1>
         </span>
       ))}
     </span>

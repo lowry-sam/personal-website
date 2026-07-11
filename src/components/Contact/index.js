@@ -5,6 +5,8 @@ import { useEffect, useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import { MapContainer, TileLayer, Marker,Popup } from 'react-leaflet'
 import Footer from '../Footer'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
     const [ letterClass, setLetterClass ] = useState('text-animate')
@@ -49,7 +51,7 @@ return (
     <>
       <div className="container contact-page">
         <div className="text-zone">
-          <div className="header">
+          <div className="header" style={{marginLeft: 25}}>
             <h1>
               <AnimatedLetters
                 letterClass={letterClass}
@@ -67,8 +69,16 @@ return (
               to your business! I am open to remote, hybrid, and in-person opportunities in the Chicagoland area.
             </p>
             <p className="bold">
-              Please reach out to me either by email, phone, or by filling out the form below!
+              Please reach out to me either by email or by filling out the form below!
             </p>
+            <p className='email' style={{marginTop: 4}}> 
+                <FontAwesomeIcon
+                icon={faEnvelope}
+                color="red"
+                className="anchor-icon"
+                style={{marginRight: 4}}
+                />
+            slowry44@me.com</p>  
           </div>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>

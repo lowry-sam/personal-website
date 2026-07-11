@@ -32,7 +32,7 @@ body.active-modal {
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
-    background: linear-gradient(to bottom, rgb(121, 121, 121), rgb(70, 70, 70));
+    background: linear-gradient(to bottom, rgb(83, 83, 83), rgb(0, 0, 0));
     padding: 30px 30px;
     border-radius: 3px;
     max-width: 600px;
@@ -41,6 +41,8 @@ body.active-modal {
     width: 100%;
     //background-color: red;
     margin-bottom: 20px;
+    flex-direction: column;
+    display: flex;
 
     .close-icon-no-show {
         display: none;
@@ -50,15 +52,15 @@ body.active-modal {
         position: inherit;
         top: 20px;
         right: 20px;
-        display: block;
+        //display: block;
         color: white;
         transition: 0.25s;
         display: flex;
         &:hover {
             color: yellow;
                 
-                transform: translateY(-2px) ;
-                
+                //transform: translateY(-2px) ;
+                transform: translateY(-2px) rotate(-180deg);
                 transition: 0.25s;
                 cursor: pointer;
         }
@@ -67,7 +69,57 @@ body.active-modal {
     @media screen and (max-width: 750px){
         width:  75vw;
     }
+
+    @media screen and (max-height: 550px){
+        //top: 50%;
+        height: 70%;
+        //overflow-y: scroll;
+    }
+
+    
+
+
+    .flat-button {
+        color: yellow;
+        font-size: 11px;
+        letter-spacing: 3px;
+        text-decoration: none;
+        padding: 8px 8px;
+        padding-right: 6px;
+        border: 1px solid yellow;
+        //float: left;
+        border-radius: 4px;
+        background: 0 0;
+        text-transform: uppercase;
+        float: left;
+        text-align: center;
+        margin-right: 15px;
+        transition: 0.1s ease-in-out;
+        display: flex;
+        width: 25%;
+        min-width: 170px;
+        margin-bottom: 10px;
+        justify-content: center;
+        position: relative;
+        &:hover {
+            cursor: pointer;
+            background-color: yellow;
+            color: black;
+            transform: translateY(-1px) translateX(1px);
+            transition: 0.1s ease-in-out;
+        }
+
+        @media screen and (max-height: 360px){
+        //top: 50%;
+        
+            display: none;
+        
+        //overflow-y: scroll;
+    }
+    }
 }
+
+
 
 img {
     width: 100px;
@@ -110,6 +162,12 @@ img {
     height: 300px;
     align-items: center;
     justify-content: baseline;
+
+    @media screen and (max-height: 400px){
+        //top: 50%;
+        display: none;
+        //overflow-y: scroll;
+    }
 }
 
 .image-item {
@@ -134,6 +192,12 @@ img {
    // margin: 5px;
    align-items: center;
    margin-bottom: 10px;
+
+   @media screen and (max-height: 280px){
+        //top: 50%;
+       display: none;
+        //overflow-y: scroll;
+    }
 
    .h3-portfolio {
         color: white;

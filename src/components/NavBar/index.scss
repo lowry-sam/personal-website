@@ -329,7 +329,7 @@
       padding: 20 20;
       //background: red;;
       //float: left;
-
+      transition: 0.25s;
       &:hover {
             color: yellow;
                 
@@ -1166,26 +1166,33 @@
      .hamburger-icon,
      .close-icon {
         position: absolute;
-        top: 13px;
+        top: 15px;
         right: 30px;
         display: block;
         color: white;
+        display: flex;
+        transition: 0.25s;
         //z-index: 5;
-
+        //transform: translateY(0px) rotate(180deg);
         &:hover {
             color: yellow;
                 
-                transform: translateY(-2px) ;
-                
-                transition: 0.25s;
+                // transform:  ;
+                transform: translateY(-2px) rotate(-180deg);
+                //transition: 0.25s;
                 cursor: pointer;
           }
      }
      .hamburger-icon {
       z-index:5;
+      transform: translateY(0px);
+      // &:hover {
+      //   transform: translateY(-2px) rotate(-180deg);
+      // }
      }
      .close-icon {
       top: 30px;
+      
      }
   }
 }

@@ -3,6 +3,7 @@ import './Modal.scss'
 import portfolioData from '../../data/portfolio.json'
 import { faClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from "react-router-dom";
 
 export default function Modal ({ changeModalState, index } )  {
     const [modal, setModal] = useState(true);
@@ -26,7 +27,7 @@ export default function Modal ({ changeModalState, index } )  {
             {
                 images.map((image, idx) => {
                     return (
-                        <div className={'image-item ' + idx}>
+                        <div className={'image-item ' + idx} alt={'image ' + idx}>
                             <img src={image}/>
                         </div>
                     )
@@ -48,7 +49,9 @@ export default function Modal ({ changeModalState, index } )  {
                     )
                 })
             }
+            
         </div>
+        
     );
   }
 
@@ -73,6 +76,8 @@ export default function Modal ({ changeModalState, index } )  {
             </p>
             
             {renderTags(portfolioData.portfolio[index].tags)}
+            <a href={portfolioData.portfolio[index].url}><button className="flat-button"> Link to Project </button></a>
+           {/* <a to="www.google.com" className="flat-button" value="LINK TO PROJECT" /> */}
             {/* <button className="close-modal" onClick={toggleModal}>
               CLOSE
             </button> */}
