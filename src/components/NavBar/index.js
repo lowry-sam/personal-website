@@ -183,7 +183,7 @@ const NavBar = ({navigation}) => {
     //const [showNav, setShowNav] = useState(false);
     const [showBurger, setBurger] = useState(true);
     const navOptions = [
-        {name: "Home", left: 1.7, width: 13}, 
+        {name: "Home", left: 1.5, width: 13}, 
         {name: "About Me", left: 15, width: 18}, 
         {name: "Resume", left: 29.2, width: 16}, 
         {name:"Portfolio", left: 42.6, width: 15}, 

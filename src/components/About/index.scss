@@ -31,6 +31,9 @@
     animation-fill-mode: forwards;
     margin-left: 4vw;
     margin-bottom: 30px;
+    font-family: 'Otflag';
+    font-weight: 100;
+    letter-spacing: 1px;
     //z-index: 1000;
     h1 {
       //margin:10px 20px;
@@ -52,7 +55,7 @@
     .nav-bar-text {
       //color: red;
       margin: 0px 0px;
-      font-weight: bold;
+      font-weight: 1000;
       transition: 0.1s;
       
       &:hover {
@@ -368,8 +371,9 @@
       
       /* Text styles and centering using Flexbox */
       color: white;
-      font-family: sans-serif;
-      font-size: 18px;     
+      font-family: 'Cuttertop';
+      font-weight: 1000;
+      font-size: 20px;     
       font-weight: bold;
       display: flex;
       justify-content: center;
@@ -377,7 +381,7 @@
       padding: 50px;
       box-sizing: border-box;
       text-align: center;
-      -webkit-text-stroke: #000000 1px;
+      -webkit-text-stroke: #000000 0.5px;
       font-weight: 1000;
       flex-wrap: nowrap;
       animation-name: jitter;
@@ -1153,7 +1157,8 @@
             
             /* Text styles and centering using Flexbox */
             color: white;
-            font-family: sans-serif;
+            font-family: 'Cuttertop';
+            font-weight: 1000;
             font-size: 17px;     
             font-weight: bold;
             display: flex;
@@ -1162,7 +1167,7 @@
             padding:0px;
             box-sizing: border-box;
             text-align: center;
-            -webkit-text-stroke: #000000 1px;
+            -webkit-text-stroke: #000000 0.5px;
             font-weight: 1000;
             flex-wrap: nowrap;
             animation-name: jitter;

@@ -61,6 +61,8 @@
                 color: white;
                 transition: 0.25s;
                  font-size: 13px;
+                 font-family: 'Sherif';
+                 letter-spacing: 0.5px;
                 &:hover {
                     //color: yellow;
                     transform: translateY(-2px);
@@ -75,9 +77,11 @@
     h3 {
         color: white;
         font-size: 13px;
-        padding: 0 20px;
+        padding: 10 10px;
         margin-top: 20px;
         font-weight: 400;
+        font-family: 'Sherif';
+        letter-spacing: 0.5px;
     }
 }
 

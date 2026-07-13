@@ -34,6 +34,41 @@ $primary-color: white;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Otflag';
+  src: url('./assets/fonts/Kaph/otflag-sans.medium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sherif';
+  src: url('./assets/fonts/Kaph/sherif.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cuttertop';
+  src: url('./assets/fonts/Kaph/Cuttertop.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GOODDB';
+  src: url('./assets/fonts/Kaph/GOODDB__.TTF');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rhyder';
+  src: url('./assets/fonts/Kaph/Rhyder.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 input,
 textarea {
   font-family: 'Helvetica Neue', sans-serif;

@@ -50,7 +50,7 @@
 //       text-decoration: none;
 
 //       &:hover {
-//         color: yellow;
+//         color: #ffd700;
 //         transform: translateY(-2px);
 //         transition: 0.3s ease-in-out;
 //         cursor: pointer;
@@ -267,7 +267,7 @@
       margin: auto;
       justify-content: space-around;
        //align-items: center;
-      //background-color: yellow;
+      //background-color: #ffd700;
       //padding: 0px 20px;
       //margin: 0px 20px;
     .socials{
@@ -288,7 +288,7 @@
         margin: 0px 3px;
         transition: 0.25s;
         &:hover {
-           color: yellow;
+           color: #ffd700;
                 
                 transform: translateY(-2px) translateX(2px);
                 
@@ -331,7 +331,7 @@
       //float: left;
       transition: 0.25s;
       &:hover {
-            color: yellow;
+            color: #ffd700;
                 
                 transform: translateY(-2px) translateX(2px);
                 
@@ -361,7 +361,7 @@
           justify-content: right;
           color: white;
           &:hover {
-            color: yellow;
+            color: #ffd700;
           }
           
           
@@ -424,7 +424,7 @@
             transition: 0.25s ease-in-out;
             //background-color: red;
             &:hover {
-                color: yellow;
+                color: #ffd700;
                 
                 transform: translateY(-2px) ;
                 
@@ -481,7 +481,7 @@
             width: 150px;
             height: 5px;
             top: calc(100% - 5px);
-            background-color: yellow;
+            background-color: #ffd700;
             border-radius: 20px;
             animation: position 3s ease;
           }
@@ -495,7 +495,7 @@
             //width: 13%;
             height: 5px;
             top: calc(100% - 5px);
-            background-color: yellow;
+            background-color: #ffd700;
             border-radius: 20px;
             animation: position 3s ease;
             left: 50%;
@@ -529,6 +529,8 @@
               position: relative;
               font-size: 20px;
               text-decoration: none;
+              font-family: 'Sherif';
+              letter-spacing: 1px;
               
               font-weight: 400;
               cursor: pointer;
@@ -536,7 +538,7 @@
               //background-color: red;
 
               &:hover {
-                color: yellow;
+                color: #ffd700;
                 
                 
                 //font-weight: 400;
@@ -548,7 +550,8 @@
               position:relative;
               display: block;
               //top: 15px;
-              
+              font-family: 'Sherif';
+              letter-spacing: 1px;
               font-size: 20px;
               text-decoration: none;
               //padding: 0.5rem 5rem;
@@ -824,7 +827,7 @@
 //       //flex-direction: column;
 
 //       &:hover {
-//             color: yellow;
+//             color: #ffd700;
                 
 //                 transform: translateY(-2px);
                 
@@ -852,7 +855,7 @@
 //       width: 100%;
 //       background-color: red;
 //       ul {
-//         background-color: yellow;
+//         background-color: #ffd700;
 //         li {
 //           background-color: purple;
 
@@ -959,7 +962,7 @@
 //         color: white;
 
 //         &:hover {
-//             color: yellow;
+//             color: #ffd700;
                 
 //                 transform: translateY(-2px);
                 
@@ -1036,7 +1039,7 @@
        h1 {
         color: white;
         &:hover {
-            color: yellow;
+            color: #ffd700;
         }
        }
       // //flex-direction: row;
@@ -1044,7 +1047,7 @@
       //flex-direction: column;
 
       &:hover {
-            color: yellow;
+            color: #ffd700;
                 
                 transform: translateY(-2px) translateX(2px);
                 
@@ -1125,7 +1128,7 @@
           padding: 10px 0px;
           //background-color: green;
             .selected-nav-link {
-                color: yellow;
+                color: #ffd700;
                 //padding: 10px 0px;
               
             }
@@ -1175,7 +1178,7 @@
         //z-index: 5;
         //transform: translateY(0px) rotate(180deg);
         &:hover {
-            color: yellow;
+            color: #ffd700;
                 
                 // transform:  ;
                 transform: translateY(-2px) rotate(-180deg);
