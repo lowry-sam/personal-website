@@ -10,22 +10,31 @@
             "images": ["/portfolio/1/b.jpeg","/portfolio/1/b.jpeg","/portfolio/1/b.jpeg", "/portfolio/1/peely-fortnite.gif"]
         },
         {
-            "cover": "/portfolio/1/b.jpeg",
-            "title": "second project",
-            "description": "React",
-            "url": "http://google.com"
+            "cover": "/portfolio/1/QRCode_Generator/1.png",
+            "title": "QR Code Generator",
+            "type": "Software Development",
+            "description": "A python project to create custom QR codes for any website. The user can create codes with custom file formats and colors, which will display in the app and save to a folder. Can be used via terminal or as an application.",
+            "tags": ["Python", "Tkinter", "QRCode", "Segno", "PIL"],
+            "url": "https://github.com/lowry-sam/QRcode_generator",
+            "images": ["/portfolio/1/QRCode_Generator/1.png","/portfolio/1/QRCode_Generator/2.png","/portfolio/1/QRCode_Generator/githubvid.gif", "/portfolio/1/QRCode_Generator/color.gif", "/portfolio/1/QRCode_Generator/3.png", "/portfolio/1/QRCode_Generator/youtubevid.gif", "/portfolio/1/QRCode_Generator/4.png", "/portfolio/1/QRCode_Generator/error.gif"]
         },
         {
-            "cover": "/portfolio/1/b.jpeg",
-            "title": "third project",
-            "description": "React",
-            "url": "http://google.com"
+            "cover": "/portfolio/1/budget_tracker/cover.png",
+            "title": "Budget Tracker",
+            "type": "Software Development",
+            "description": "My first ever individual project I developed, entirely in Java, displayed in a terminal enviornment. This was how I tracked my budget during my junior and senior years in college. It helped me develop my software engineering skills, and reinforced many concepts like classes, file I/O, backend and frontend setup, inheretence/abstraction, and user experience.",
+            "tags": ["Java", "Make", "Backend", "Frontend", "File I/O", "UX", "Terminal", "Inheritance", "Classes", "Java Libraries"],
+            "url": "https://github.com/lowry-sam/budget_tracking",
+            "images": ["/portfolio/1/budget_tracker/cover.png", "/portfolio/1/budget_tracker/file setup.gif", "/portfolio/1/budget_tracker/new file.png", "/portfolio/1/budget_tracker/entry.gif", "/portfolio/1/budget_tracker/stats.png", "/portfolio/1/budget_tracker/pages.png", "/portfolio/1/budget_tracker/earning.gif", "/portfolio/1/budget_tracker/spending.png", "/portfolio/1/budget_tracker/earning.png", "/portfolio/1/budget_tracker/printing.gif", "/portfolio/1/budget_tracker/categories.png", "/portfolio/1/budget_tracker/stats.png", "/portfolio/1/budget_tracker/file setup.gif", "/portfolio/1/budget_tracker/file.png", "/portfolio/1/budget_tracker/ending program.gif" ]
         },
         {
-            "cover": "/portfolio/1/b.jpeg",
-            "title": "fourth! project",
-            "description": "React",
-            "url": "http://google.com"
+            "cover": "/portfolio/1/Evans_App/first.PNG",
+            "title": "Evan's App",
+            "type": "Software Development",
+            "description": "As someone who loves music, I wanted to create an app using React-Native so that I could expose my non-music-listening friend, Evan, to some of the best albums ever made. This app allows the user to randomly generate an app to listen to through accessing the Spotify API. The user may also access the entire list, displaying each album's cover, artist, and title.",
+            "tags": ["React-Native", "JavaScript", "API", "App", "Deployment", "Expo", "Backend", "Frontend", "UX"],
+            "url": "https://github.com/lowry-sam/evans_phone_app",
+            "images": ["/portfolio/1/Evans_App/first.PNG", "/portfolio/1/Evans_App/intro.gif", "/portfolio/1/Evans_App/second.PNG", "/portfolio/1/Evans_App/change album.gif", "/portfolio/1/Evans_App/third.PNG", "/portfolio/1/Evans_App/fourth.PNG", "/portfolio/1/Evans_App/mini albums.gif"]
         },
         {
             "cover": "/portfolio/1/b.jpeg",

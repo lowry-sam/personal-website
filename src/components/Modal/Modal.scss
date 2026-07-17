@@ -50,8 +50,8 @@ body.active-modal {
 
     .close-icon {
         position: inherit;
-        top: 20px;
-        right: 20px;
+        top: 25px;
+        right: 25px;
         //display: block;
         color: white;
         transition: 0.25s;
@@ -98,12 +98,13 @@ body.active-modal {
         display: flex;
         width: 25%;
         min-width: 170px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         justify-content: center;
         position: relative;
         font-family: 'Sherif';
         padding-bottom: 10px;
-        
+        //margin-bottom: 5px;
+
         &:hover {
             cursor: pointer;
             background-color: #ffd700;
@@ -136,12 +137,12 @@ img {
     font-size: 40px;
     font-family: 'Sherif';
     letter-spacing: 3px;
-    margin-top: -5px;
-    margin-bottom: 5px;
+    margin-top: -10px;
+    margin-bottom: 15px;
 }
 
 .portfolio-type {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-style: italic;
     font-family: 'Otflag';
     margin-left: -2px;
@@ -172,6 +173,7 @@ img {
     height: 300px;
     align-items: center;
     justify-content: baseline;
+    
 
     @media screen and (max-height: 400px){
         //top: 50%;
@@ -185,6 +187,7 @@ img {
     background-color: blue;
     height: 100%;
     width: auto;
+    margin-right: 5px;
 
     img {
         height: 100%;

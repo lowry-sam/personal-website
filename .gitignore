@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/public/portfolio/1/QRCode_Generator
 
 # testing
 /coverage
